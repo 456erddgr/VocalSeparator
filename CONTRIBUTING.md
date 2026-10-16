@@ -372,7 +372,9 @@ venv\Scripts\python.exe -c "import json;json.load(open('catalog.json',encoding='
 - `docs/` 里的技术论断必须**能在代码里找到依据**，引用时给**文件名 + 行号**（例：`app.py:1091`）；
 - 拿不准的地方写「**已知限制 / 待确认**」，不要编；
 - 不要**编造**没实测过的性能数字。目前唯一实测结论是：CPU 线程 / `cudnn.benchmark` / `batch_size` 差异 < 15%，`overlap` 8→32 约 4 倍慢；
-- 截图统一放 `show/`，文档里用相对路径引用（如 `![单曲分离](../show/1.png)`）。
+- 截图统一放 `show/`。引用时按文档所在层级写相对路径：`docs/` 下的文档用
+  `![单曲分离](../show/1.png)`，仓库根目录的文档用 `![单曲分离](show/1.png)`。
+  注意根目录文档写成 `../show/...` 会指向仓库外，属于断链（CI 会拦）。
 
 ---
 

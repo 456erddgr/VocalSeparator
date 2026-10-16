@@ -1,7 +1,7 @@
 name: CI
 
 # 仓库里没有模型与 FFmpeg，所以 CI 只做「代码级」检查：
-# 语法 / 导入结构 / 打包脚本 / 文档链接。真正的分离推理需要 GPU 与权重，不在 CI 跑。
+# 语法 / 结构 / 文档链接。真正的分离推理需要 GPU 与权重，不在 CI 跑。
 
 on:
   push:
@@ -26,40 +26,24 @@ jobs:
       - name: 编译全部 Python 源文件（语法检查）
         shell: pwsh
         run: |
-          $files = @('app.py','launcher.py','installer_web.py','uninstall.py') +
-                   (Get-ChildItem scripts -Filter *.py -Recurse | ForEach-Object { $_.FullName })
-          $failed = 0
+          $files = @('app.py','launcher.py','installer_web.py','uninstall.py')
+          $files += Get-ChildItem scripts -Filter *.py -Recurse | ForEach-Object { $_.FullName }
+          $failed = @()
           foreach ($f in $files) {
-            Write-Host "-> $f"
             python -m py_compile $f
-            if ($LASTEXITCODE -ne 0) { $failed = 1 }
+            if ($LASTEXITCODE -ne 0) { $failed += $f }
           }
-          if ($failed -ne 0) { throw "有文件语法检查未通过" }
-          Write-Host "全部通过"
+          if ($failed.Count -gt 0) { throw ("语法检查未通过: " + ($failed -join ', ')) }
+          Write-Host "全部通过（$($files.Count) 个文件）"
 
-      - name: 校验 catalog.json 是合法 JSON 且结构完整
+      - name: 校验 catalog.json 结构
         shell: pwsh
         run: |
           python -c "import json;d=json.load(open('catalog.json',encoding='utf-8'));assert 'buckets' in d and 'all' in d and 'presets' in d;print('buckets',len(d['buckets']),'all',len(d['all']),'presets',len(d['presets']))"
 
-      - name: 校验 app.py 里声明的内置模型都能在 catalog.json 中找到
+      - name: 校验内置模型都已登记在 catalog.json
         shell: pwsh
-        run: |
-          python - <<'PY'
-          import json, re, sys
-          src = open('app.py', encoding='utf-8').read()
-          m = re.search(r'BUILTIN_MODELS\s*=\s*\[(.*?)\]', src, re.S)
-          builtin = re.findall(r'"([^"]+)"', m.group(1))
-          cat = json.load(open('catalog.json', encoding='utf-8'))
-          known = {it['file'] for it in cat.get('all', [])}
-          missing = [b for b in builtin if b not in known]
-          print('BUILTIN_MODELS:', len(builtin))
-          if missing:
-              print('未登记在 catalog.json 的内置模型:')
-              for x in missing: print('  -', x)
-              sys.exit(1)
-          print('全部已登记')
-          PY
+        run: pwsh -File scripts/ci_check_models.ps1
 
       - name: 检查关键文件是否齐全
         shell: pwsh
@@ -71,9 +55,9 @@ jobs:
           $bad = @()
           foreach ($f in $need) { if (-not (Test-Path $f)) { $bad += $f } }
           if ($bad.Count -gt 0) { throw ("缺少文件: " + ($bad -join ', ')) }
-          Write-Host "全部就位"
+          Write-Host "全部就位（$($need.Count) 个）"
 
-      - name: 检查提交内容里没有混入超大文件
+      - name: 检查没有混入超大文件
         shell: pwsh
         run: |
           # GitHub 单文件硬上限 100 MB；这里用 20 MB 做更严的预警线
@@ -91,24 +75,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: 检查 Markdown 里的相对链接都指向存在的文件
-        shell: bash
-        run: |
-          fail=0
-          while IFS= read -r md; do
-            dir=$(dirname "$md")
-            grep -oP '\]\(\K[^)#][^)]*' "$md" 2>/dev/null | while read -r link; do
-              case "$link" in
-                http://*|https://*|mailto:*) continue ;;
-              esac
-              target="$dir/${link%%#*}"
-              if [ ! -e "$target" ]; then
-                echo "断链: $md -> $link"
-                echo "BROKEN" >> /tmp/broken
-              fi
-            done
-          done < <(find . -name '*.md' -not -path './.git/*')
-          if [ -f /tmp/broken ]; then
-            echo "存在断链，请修复"; exit 1
-          fi
-          echo "全部链接有效"
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 检查 Markdown 相对链接
+        run: python scripts/ci_check_links.py
