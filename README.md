@@ -68,12 +68,18 @@
 ### 方式 A：下载一键安装包（普通用户推荐）
 
 1. 到 [**Releases**](https://github.com/456erddgr/VocalSeparator/releases) 下载最新版的
-   安装包（`VocalSeparator-Setup.exe` + `payload.7z` 系列文件）。
-2. 把它们**放在同一个文件夹**里。
+   `VocalSeparator-Setup.exe` **和全部 `payload.7z.00N` 分卷**。
+
+   > ⚠️ **分卷必须下全**。因为 release 单个文件上限 2 GB，8 GB 的 payload 被切成
+   > `payload.7z.001` … `payload.7z.00N` 若干卷，**少下载任意一卷都会解压失败**。
+   > 浏览器批量下载时容易漏，建议下完先核对卷数与文件大小（Release 说明里有每卷字节数）。
+
+2. 把 `VocalSeparator-Setup.exe` 和所有分卷**放在同一个文件夹**里（不要改名、不要解压分卷）。
 3. 双击 `VocalSeparator-Setup.exe` → 点「开始安装」。
 4. 装完桌面会出现 `VocalSeparator` 快捷方式，双击即用。
 
 > 安装包内含自带 Python 运行时与全部模型权重，**装完不需要联网**，也不需要单独装 Python。
+> 安装程序会自动发现分卷并把 `.001` 交给 7-Zip 解压；不需要你手动合并或改名。
 
 ### 方式 B：从源码运行（开发者 / 想自己改）
 
@@ -245,8 +251,11 @@ Windows 用户也可以直接双击 **`一键安装.bat`**，逻辑与 `setup.py
 # 1) 组装绿色包（把仓库代码 + 本机 models/ bin/ runtime/ 合到一起）
 python scripts\pack_release.py assemble --out D:\VocalSeparator-green
 
-# 2) 生成安装程序用的 payload.7z
+# 2) 生成安装程序用的 payload（本机 payload.7z 约 8 GB，耗时较长）
 python scripts\pack_release.py payload --src D:\VocalSeparator-green
+
+# 2b) 要发到 GitHub Release 就加分卷（单文件必须 ≤ 2 GB，否则会被拒绝）
+python scripts\pack_release.py payload --src D:\VocalSeparator-green --volume 1900m
 
 # 3) 生成校验清单（贴到 Release 说明里）
 python scripts\pack_release.py manifest
@@ -255,8 +264,14 @@ python scripts\pack_release.py manifest
 python scripts\pack_release.py all --out D:\VocalSeparator-green
 ```
 
+> **为什么需要分卷**：GitHub Release 单个资产上限 2 GB，而完整 payload 约 8~13 GB。
+> 用 `--volume 1900m` 会产出 `payload.7z.001` / `.002` / … 一串分卷，**每一个都是发布资产**。
+> 用户必须下全所有卷并放在同一目录，`installer_web.py` 会把 `.001` 交给 7-Zip，
+> 7-Zip 自动按序接续读取其余卷 —— 传 `.002` 或其他任意一卷都读不到数据。
+> 分卷数随体积增长；公开的 v1.1.0 Release 为 7 卷（6×1900 MB + 1×1441 MB，共约 12.74 GB）。
+
 分发给别人时，把 `installer_web.py`（打包成 `VocalSeparator-Setup.exe`）
-与 `payload*.7z` **放在同一个文件夹**即可。
+与 `payload.7z` **或全部分卷**放在同一个文件夹即可。
 
 安装程序会：解压 payload 到 `%LOCALAPPDATA%\VocalSeparator` → 把 `venv\pyvenv.cfg`
 的 `home` / `executable` 指向包内自带的 `runtime\python311` → 自检依赖（import torch / gradio）
