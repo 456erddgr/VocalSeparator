@@ -368,4 +368,6 @@ VocalSeparator\
 - 模型权重作者：UVR 社区、unwa、aufr33、viperx、Gabox、Sucial、anvuew 等
 
 本项目以 **MIT** 许可开源，详见 [LICENSE](LICENSE)。
-**注意**：模型权重不包含在本仓库中，其许可取决于各权重作者，使用与再分发前请自行核对。
+**注意**：MIT 只覆盖本仓库的代码 —— 模型权重不包含在本仓库中，其许可取决于各权重作者，
+使用与再分发前请自行核对。第三方组件与权重的完整许可清单见
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
