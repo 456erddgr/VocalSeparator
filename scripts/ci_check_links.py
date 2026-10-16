@@ -19,6 +19,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
+# 同 ci_check_models.py：CI runner 的默认 stdout 编码可能是 cp1252，
+# 打印中文会 UnicodeEncodeError，这里强制 UTF-8。
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):
+        pass
+
 # [文本](目标)  —— 只取目标部分，支持标题与路径里的空格用 <> 包裹
 LINK_RE = re.compile(r"\[[^\]]*\]\(\s*(<[^>]*>|[^)\s]+)")
 

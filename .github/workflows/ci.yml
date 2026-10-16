@@ -14,6 +14,10 @@ jobs:
   lint:
     name: 语法与静态检查
     runs-on: windows-latest
+    env:
+      # Windows runner 默认 stdout 是 cp1252，脚本里有中文输出
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: 'utf-8'
 
     steps:
       - uses: actions/checkout@v4
@@ -72,6 +76,9 @@ jobs:
   docs:
     name: 文档链接检查
     runs-on: ubuntu-latest
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: 'utf-8'
     steps:
       - uses: actions/checkout@v4
 

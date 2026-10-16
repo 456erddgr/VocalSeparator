@@ -20,6 +20,15 @@ ROOT = Path(__file__).resolve().parent.parent
 APP = ROOT / "app.py"
 CATALOG = ROOT / "catalog.json"
 
+# Windows CI（GitHub Actions windows-latest）的 stdout 默认是 cp1252，
+# 打印中文会直接抛 UnicodeEncodeError。这里强制切到 UTF-8，
+# 并在旧版 Python 上回退成「无法编码的字符替换掉」而不是崩掉。
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):
+        pass
+
 
 def extract_list(source: str, name: str) -> list[str]:
     """从源码里抽出 `name = [ ... ]` 里的所有双引号字符串。"""
