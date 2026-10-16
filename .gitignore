@@ -1,0 +1,76 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ---- 虚拟环境 / 自带运行时（体积巨大，不进仓库）----
+venv/
+.venv/
+env/
+ENV/
+runtime/
+python311/
+
+# ---- 本机模型权重（约 7 GB，走 Release / 自行下载）----
+models/
+!models/.gitkeep
+
+# ---- 本地二进制（FFmpeg 约 200 MB，走 Release / 自行下载）----
+bin/
+!bin/.gitkeep
+
+# ---- 发布产物（安装包 / payload，约 17 GB）----
+dist_send/
+dist/
+payload.7z
+payload*.7z*
+*.7z.*
+wheels/
+
+# ---- 运行时生成 ----
+output/
+outputs/
+logs/
+webview_data/
+VocalSeparatorUI/
+perf.json
+tasks.json
+installer_web.log
+*_probe/
+
+# ---- Gradio / HF 缓存 ----
+.gradio/
+.cache/
+huggingface/
+*.tmp
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 临时分析产物 ----
+_models_inventory.csv
+*.log

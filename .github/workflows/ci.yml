@@ -1,0 +1,114 @@
+name: CI
+
+# 仓库里没有模型与 FFmpeg，所以 CI 只做「代码级」检查：
+# 语法 / 导入结构 / 打包脚本 / 文档链接。真正的分离推理需要 GPU 与权重，不在 CI 跑。
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  lint:
+    name: 语法与静态检查
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 编译全部 Python 源文件（语法检查）
+        shell: pwsh
+        run: |
+          $files = @('app.py','launcher.py','installer_web.py','uninstall.py') +
+                   (Get-ChildItem scripts -Filter *.py -Recurse | ForEach-Object { $_.FullName })
+          $failed = 0
+          foreach ($f in $files) {
+            Write-Host "-> $f"
+            python -m py_compile $f
+            if ($LASTEXITCODE -ne 0) { $failed = 1 }
+          }
+          if ($failed -ne 0) { throw "有文件语法检查未通过" }
+          Write-Host "全部通过"
+
+      - name: 校验 catalog.json 是合法 JSON 且结构完整
+        shell: pwsh
+        run: |
+          python -c "import json;d=json.load(open('catalog.json',encoding='utf-8'));assert 'buckets' in d and 'all' in d and 'presets' in d;print('buckets',len(d['buckets']),'all',len(d['all']),'presets',len(d['presets']))"
+
+      - name: 校验 app.py 里声明的内置模型都能在 catalog.json 中找到
+        shell: pwsh
+        run: |
+          python - <<'PY'
+          import json, re, sys
+          src = open('app.py', encoding='utf-8').read()
+          m = re.search(r'BUILTIN_MODELS\s*=\s*\[(.*?)\]', src, re.S)
+          builtin = re.findall(r'"([^"]+)"', m.group(1))
+          cat = json.load(open('catalog.json', encoding='utf-8'))
+          known = {it['file'] for it in cat.get('all', [])}
+          missing = [b for b in builtin if b not in known]
+          print('BUILTIN_MODELS:', len(builtin))
+          if missing:
+              print('未登记在 catalog.json 的内置模型:')
+              for x in missing: print('  -', x)
+              sys.exit(1)
+          print('全部已登记')
+          PY
+
+      - name: 检查关键文件是否齐全
+        shell: pwsh
+        run: |
+          $need = @('app.py','launcher.py','installer_web.py','uninstall.py',
+                    'catalog.json','requirements.txt','start.bat','一键安装.bat',
+                    'README.md','LICENSE','docs/原理与架构.md','docs/使用手册.md',
+                    'docs/部署与打包.md','docs/常见问题.md')
+          $bad = @()
+          foreach ($f in $need) { if (-not (Test-Path $f)) { $bad += $f } }
+          if ($bad.Count -gt 0) { throw ("缺少文件: " + ($bad -join ', ')) }
+          Write-Host "全部就位"
+
+      - name: 检查提交内容里没有混入超大文件
+        shell: pwsh
+        run: |
+          # GitHub 单文件硬上限 100 MB；这里用 20 MB 做更严的预警线
+          $big = Get-ChildItem -Recurse -File -Force |
+                 Where-Object { $_.FullName -notmatch '\\\.git\\' -and $_.Length -gt 20MB }
+          if ($big) {
+            $big | ForEach-Object { Write-Host "大文件: $($_.FullName) ($([math]::Round($_.Length/1MB,1)) MB)" }
+            throw "仓库里混入了大文件，请改用 Release 分发"
+          }
+          Write-Host "没有超过 20 MB 的文件"
+
+  docs:
+    name: 文档链接检查
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 检查 Markdown 里的相对链接都指向存在的文件
+        shell: bash
+        run: |
+          fail=0
+          while IFS= read -r md; do
+            dir=$(dirname "$md")
+            grep -oP '\]\(\K[^)#][^)]*' "$md" 2>/dev/null | while read -r link; do
+              case "$link" in
+                http://*|https://*|mailto:*) continue ;;
+              esac
+              target="$dir/${link%%#*}"
+              if [ ! -e "$target" ]; then
+                echo "断链: $md -> $link"
+                echo "BROKEN" >> /tmp/broken
+              fi
+            done
+          done < <(find . -name '*.md' -not -path './.git/*')
+          if [ -f /tmp/broken ]; then
+            echo "存在断链，请修复"; exit 1
+          fi
+          echo "全部链接有效"

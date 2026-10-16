@@ -1,0 +1,3484 @@
+{
+ "buckets": {
+  "人声/伴奏双轨": [
+   {
+    "file": "model_bs_roformer_ep_317_sdr_12.9755.ckpt",
+    "name": "Roformer Model: BS-Roformer-Viperx-1297",
+    "stems": [
+     "vocals* (11.8)",
+     "instrumental (16.5)"
+    ],
+    "sdr": {
+     "vocals": 11.8,
+     "instrumental": 16.5
+    },
+    "peak": 16.5,
+    "type": "MDXC"
+   },
+   {
+    "file": "model_bs_roformer_ep_368_sdr_12.9628.ckpt",
+    "name": "Roformer Model: BS-Roformer-Viperx-1296",
+    "stems": [
+     "vocals* (12.1)",
+     "instrumental (16.3)"
+    ],
+    "sdr": {
+     "vocals": 12.1,
+     "instrumental": 16.3
+    },
+    "peak": 16.3,
+    "type": "MDXC"
+   },
+   {
+    "file": "melband_roformer_inst_v2.ckpt",
+    "name": "Roformer Model: MelBand Roformer Kim | Inst V2 by Unwa",
+    "stems": [
+     "instrumental* (16.1)",
+     "vocals (10.3)"
+    ],
+    "sdr": {
+     "instrumental": 16.1,
+     "vocals": 10.3
+    },
+    "peak": 16.1,
+    "type": "MDXC"
+   },
+   {
+    "file": "melband_roformer_instvoc_duality_v1.ckpt",
+    "name": "Roformer Model: MelBand Roformer Kim | InstVoc Duality V1 by Unwa",
+    "stems": [
+     "vocals (11.0)",
+     "instrumental (16.1)"
+    ],
+    "sdr": {
+     "vocals": 11.0,
+     "instrumental": 16.1
+    },
+    "peak": 16.1,
+    "type": "MDXC"
+   },
+   {
+    "file": "melband_roformer_instvox_duality_v2.ckpt",
+    "name": "Roformer Model: MelBand Roformer Kim | InstVoc Duality V2 by Unwa",
+    "stems": [
+     "vocals (11.0)",
+     "instrumental (16.1)"
+    ],
+    "sdr": {
+     "vocals": 11.0,
+     "instrumental": 16.1
+    },
+    "peak": 16.1,
+    "type": "MDXC"
+   },
+   {
+    "file": "melband_roformer_inst_v1.ckpt",
+    "name": "Roformer Model: MelBand Roformer Kim | Inst V1 by Unwa",
+    "stems": [
+     "instrumental* (15.9)",
+     "vocals (9.8)"
+    ],
+    "sdr": {
+     "instrumental": 15.9,
+     "vocals": 9.8
+    },
+    "peak": 15.9,
+    "type": "MDXC"
+   },
+   {
+    "file": "melband_roformer_inst_v1e.ckpt",
+    "name": "Roformer Model: MelBand Roformer Kim | Inst V1 (E) by Unwa",
+    "stems": [
+     "instrumental* (15.8)",
+     "vocals (9.6)"
+    ],
+    "sdr": {
+     "instrumental": 15.8,
+     "vocals": 9.6
+    },
+    "peak": 15.8,
+    "type": "MDXC"
+   },
+   {
+    "file": "model_mel_band_roformer_ep_3005_sdr_11.4360.ckpt",
+    "name": "Roformer Model: Mel-Roformer-Viperx-1143",
+    "stems": [
+     "vocals* (10.5)",
+     "instrumental (15.1)"
+    ],
+    "sdr": {
+     "vocals": 10.5,
+     "instrumental": 15.1
+    },
+    "peak": 15.1,
+    "type": "MDXC"
+   },
+   {
+    "file": "mel_band_roformer_karaoke_aufr33_viperx_sdr_10.1956.ckpt",
+    "name": "Roformer Model: Mel-Roformer-Karaoke-Aufr33-Viperx",
+    "stems": [
+     "vocals* (8.4)",
+     "instrumental (14.7)"
+    ],
+    "sdr": {
+     "vocals": 8.4,
+     "instrumental": 14.7
+    },
+    "peak": 14.7,
+    "type": "MDXC"
+   }
+  ],
+  "人声专用": [
+   {
+    "file": "vocals_mel_band_roformer.ckpt",
+    "name": "Roformer Model: MelBand Roformer | Vocals by Kimberley Jensen",
+    "stems": [
+     "vocals* (12.6)",
+     "other"
+    ],
+    "sdr": {
+     "vocals": 12.6,
+     "other": null
+    },
+    "peak": 12.6,
+    "type": "MDXC"
+   },
+   {
+    "file": "melband_roformer_big_beta4.ckpt",
+    "name": "Roformer Model: MelBand Roformer Kim | Big Beta 4 FT by unwa",
+    "stems": [
+     "vocals* (12.5)",
+     "other"
+    ],
+    "sdr": {
+     "vocals": 12.5,
+     "other": null
+    },
+    "peak": 12.5,
+    "type": "MDXC"
+   },
+   {
+    "file": "mel_band_roformer_kim_ft_unwa.ckpt",
+    "name": "Roformer Model: MelBand Roformer Kim | FT by unwa",
+    "stems": [
+     "vocals* (12.4)",
+     "other"
+    ],
+    "sdr": {
+     "vocals": 12.4,
+     "other": null
+    },
+    "peak": 12.4,
+    "type": "MDXC"
+   },
+   {
+    "file": "melband_roformer_big_beta5e.ckpt",
+    "name": "Roformer Model: MelBand Roformer Kim | Big Beta 5e FT by unwa",
+    "stems": [
+     "vocals* (12.4)",
+     "other"
+    ],
+    "sdr": {
+     "vocals": 12.4,
+     "other": null
+    },
+    "peak": 12.4,
+    "type": "MDXC"
+   },
+   {
+    "file": "MelBandRoformerBigSYHFTV1.ckpt",
+    "name": "Roformer Model: MelBand Roformer Kim | Big SYHFT V1 by SYH99999",
+    "stems": [
+     "vocals* (12.3)",
+     "other"
+    ],
+    "sdr": {
+     "vocals": 12.3,
+     "other": null
+    },
+    "peak": 12.3,
+    "type": "MDXC"
+   },
+   {
+    "file": "MelBandRoformerSYHFTV3Epsilon.ckpt",
+    "name": "Roformer Model: MelBand Roformer Kim | SYHFT V3 by SYH99999",
+    "stems": [
+     "vocals* (9.5)",
+     "other"
+    ],
+    "sdr": {
+     "vocals": 9.5,
+     "other": null
+    },
+    "peak": 9.5,
+    "type": "MDXC"
+   },
+   {
+    "file": "MelBandRoformerSYHFTV2.ckpt",
+    "name": "Roformer Model: MelBand Roformer Kim | SYHFT V2 by SYH99999",
+    "stems": [
+     "vocals* (8.6)",
+     "other"
+    ],
+    "sdr": {
+     "vocals": 8.6,
+     "other": null
+    },
+    "peak": 8.6,
+    "type": "MDXC"
+   },
+   {
+    "file": "MelBandRoformerSYHFTV2.5.ckpt",
+    "name": "Roformer Model: MelBand Roformer Kim | SYHFT V2.5 by SYH99999",
+    "stems": [
+     "vocals* (8.5)",
+     "other"
+    ],
+    "sdr": {
+     "vocals": 8.5,
+     "other": null
+    },
+    "peak": 8.5,
+    "type": "MDXC"
+   },
+   {
+    "file": "MelBandRoformerSYHFT.ckpt",
+    "name": "Roformer Model: MelBand Roformer Kim | SYHFT by SYH99999",
+    "stems": [
+     "vocals* (8.0)",
+     "other"
+    ],
+    "sdr": {
+     "vocals": 8.0,
+     "other": null
+    },
+    "peak": 8.0,
+    "type": "MDXC"
+   },
+   {
+    "file": "bs_roformer_vocals_revive_unwa.ckpt",
+    "name": "Roformer Model: BS Roformer | Vocals Revive by Unwa",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "bs_roformer_vocals_revive_v2_unwa.ckpt",
+    "name": "Roformer Model: BS Roformer | Vocals Revive V2 by Unwa",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "bs_roformer_vocals_revive_v3e_unwa.ckpt",
+    "name": "Roformer Model: BS Roformer | Vocals Revive V3e by Unwa",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   }
+  ],
+  "伴奏专用": [
+   {
+    "file": "mel_band_roformer_instrumental_becruily.ckpt",
+    "name": "Roformer Model: MelBand Roformer | Instrumental by becruily",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "mel_band_roformer_instrumental_gabox.ckpt",
+    "name": "Roformer Model: MelBand Roformer | Instrumental by Gabox",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "mel_band_roformer_instrumental_2_gabox.ckpt",
+    "name": "Roformer Model: MelBand Roformer | Instrumental 2 by Gabox",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "mel_band_roformer_instrumental_3_gabox.ckpt",
+    "name": "Roformer Model: MelBand Roformer | Instrumental 3 by Gabox",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "mel_band_roformer_instrumental_bleedless_v1_gabox.ckpt",
+    "name": "Roformer Model: MelBand Roformer | Instrumental Bleedless V1 by Gabox",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "mel_band_roformer_instrumental_bleedless_v2_gabox.ckpt",
+    "name": "Roformer Model: MelBand Roformer | Instrumental Bleedless V2 by Gabox",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "mel_band_roformer_instrumental_bleedless_v3_gabox.ckpt",
+    "name": "Roformer Model: MelBand Roformer | Instrumental Bleedless V3 by Gabox",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "mel_band_roformer_instrumental_fullness_v1_gabox.ckpt",
+    "name": "Roformer Model: MelBand Roformer | Instrumental Fullness V1 by Gabox",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "mel_band_roformer_instrumental_fullness_v2_gabox.ckpt",
+    "name": "Roformer Model: MelBand Roformer | Instrumental Fullness V2 by Gabox",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "mel_band_roformer_instrumental_fullness_v3_gabox.ckpt",
+    "name": "Roformer Model: MelBand Roformer | Instrumental Fullness V3 by Gabox",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "mel_band_roformer_instrumental_fullness_v4_gabox.ckpt",
+    "name": "Roformer Model: MelBand Roformer | Instrumental Fullness V4 by Gabox",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "mel_band_roformer_instrumental_fullness_noise_v4_gabox.ckpt",
+    "name": "Roformer Model: MelBand Roformer | Instrumental Fullness Noisy V4 by Gabox",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   }
+  ],
+  "多轨（鼓/贝斯）": [
+   {
+    "file": "hdemucs_mmi.yaml",
+    "name": "Demucs v4: hdemucs_mmi",
+    "stems": [
+     "vocals (10.2)",
+     "drums (9.6)",
+     "bass (12.2)",
+     "other"
+    ],
+    "sdr": {
+     "vocals": 10.2,
+     "drums": 9.6,
+     "bass": 12.2,
+     "other": null
+    },
+    "peak": 12.2,
+    "type": "Demucs"
+   },
+   {
+    "file": "htdemucs_ft.yaml",
+    "name": "Demucs v4: htdemucs_ft",
+    "stems": [
+     "vocals (10.8)",
+     "drums (10.0)",
+     "bass (12.0)",
+     "other"
+    ],
+    "sdr": {
+     "vocals": 10.8,
+     "drums": 10.0,
+     "bass": 12.0,
+     "other": null
+    },
+    "peak": 12.0,
+    "type": "Demucs"
+   },
+   {
+    "file": "htdemucs.yaml",
+    "name": "Demucs v4: htdemucs",
+    "stems": [
+     "vocals (9.9)",
+     "drums (9.4)",
+     "bass (11.6)",
+     "other"
+    ],
+    "sdr": {
+     "vocals": 9.9,
+     "drums": 9.4,
+     "bass": 11.6,
+     "other": null
+    },
+    "peak": 11.6,
+    "type": "Demucs"
+   },
+   {
+    "file": "kuielab_a_bass.onnx",
+    "name": "MDX-Net Model: kuielab_a_bass",
+    "stems": [
+     "bass* (10.4)",
+     "no bass"
+    ],
+    "sdr": {
+     "bass": 10.4,
+     "no bass": null
+    },
+    "peak": 10.4,
+    "type": "MDX"
+   },
+   {
+    "file": "htdemucs_6s.yaml",
+    "name": "Demucs v4: htdemucs_6s",
+    "stems": [
+     "vocals (9.6)",
+     "drums (8.5)",
+     "bass (10.1)",
+     "guitar",
+     "piano",
+     "other"
+    ],
+    "sdr": {
+     "vocals": 9.6,
+     "drums": 8.5,
+     "bass": 10.1,
+     "guitar": null,
+     "piano": null,
+     "other": null
+    },
+    "peak": 10.1,
+    "type": "Demucs"
+   },
+   {
+    "file": "kuielab_b_bass.onnx",
+    "name": "MDX-Net Model: kuielab_b_bass",
+    "stems": [
+     "bass* (9.9)",
+     "no bass"
+    ],
+    "sdr": {
+     "bass": 9.9,
+     "no bass": null
+    },
+    "peak": 9.9,
+    "type": "MDX"
+   },
+   {
+    "file": "kuielab_b_drums.onnx",
+    "name": "MDX-Net Model: kuielab_b_drums",
+    "stems": [
+     "drums* (7.1)",
+     "no drums"
+    ],
+    "sdr": {
+     "drums": 7.1,
+     "no drums": null
+    },
+    "peak": 7.1,
+    "type": "MDX"
+   },
+   {
+    "file": "kuielab_a_drums.onnx",
+    "name": "MDX-Net Model: kuielab_a_drums",
+    "stems": [
+     "drums* (7.0)",
+     "no drums"
+    ],
+    "sdr": {
+     "drums": 7.0,
+     "no drums": null
+    },
+    "peak": 7.0,
+    "type": "MDX"
+   },
+   {
+    "file": "model_bs_roformer_ep_937_sdr_10.5309.ckpt",
+    "name": "Roformer Model: BS-Roformer-Viperx-1053",
+    "stems": [
+     "no drum-bass*",
+     "drum-bass"
+    ],
+    "sdr": {
+     "no drum-bass": null,
+     "drum-bass": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "MDX23C-DrumSep-aufr33-jarredou.ckpt",
+    "name": "MDX23C Model: MDX23C DrumSep by aufr33-jarredou",
+    "stems": [
+     "kick",
+     "snare",
+     "toms",
+     "hh",
+     "ride",
+     "crash"
+    ],
+    "sdr": {
+     "kick": null,
+     "snare": null,
+     "toms": null,
+     "hh": null,
+     "ride": null,
+     "crash": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   }
+  ],
+  "卡拉OK": [
+   {
+    "file": "UVR_MDXNET_KARA_2.onnx",
+    "name": "MDX-Net Model: UVR-MDX-NET Karaoke 2",
+    "stems": [
+     "instrumental* (14.8)",
+     "vocals (5.4)"
+    ],
+    "sdr": {
+     "instrumental": 14.8,
+     "vocals": 5.4
+    },
+    "peak": 14.8,
+    "type": "MDX"
+   },
+   {
+    "file": "mel_band_roformer_karaoke_aufr33_viperx_sdr_10.1956.ckpt",
+    "name": "Roformer Model: Mel-Roformer-Karaoke-Aufr33-Viperx",
+    "stems": [
+     "vocals* (8.4)",
+     "instrumental (14.7)"
+    ],
+    "sdr": {
+     "vocals": 8.4,
+     "instrumental": 14.7
+    },
+    "peak": 14.7,
+    "type": "MDXC"
+   },
+   {
+    "file": "UVR_MDXNET_KARA.onnx",
+    "name": "MDX-Net Model: UVR-MDX-NET Karaoke",
+    "stems": [
+     "vocals* (5.6)",
+     "instrumental (14.1)"
+    ],
+    "sdr": {
+     "vocals": 5.6,
+     "instrumental": 14.1
+    },
+    "peak": 14.1,
+    "type": "MDX"
+   },
+   {
+    "file": "6_HP-Karaoke-UVR.pth",
+    "name": "VR Arch Single Model v5: 6_HP-Karaoke-UVR",
+    "stems": [
+     "instrumental* (13.0)",
+     "vocals (4.6)"
+    ],
+    "sdr": {
+     "instrumental": 13.0,
+     "vocals": 4.6
+    },
+    "peak": 13.0,
+    "type": "VR"
+   },
+   {
+    "file": "5_HP-Karaoke-UVR.pth",
+    "name": "VR Arch Single Model v5: 5_HP-Karaoke-UVR",
+    "stems": [
+     "instrumental* (12.2)",
+     "vocals (5.2)"
+    ],
+    "sdr": {
+     "instrumental": 12.2,
+     "vocals": 5.2
+    },
+    "peak": 12.2,
+    "type": "VR"
+   },
+   {
+    "file": "mel_band_roformer_karaoke_gabox.ckpt",
+    "name": "Roformer Model: MelBand Roformer | Karaoke by Gabox",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "mel_band_roformer_karaoke_gabox_v2.ckpt",
+    "name": "Roformer Model: MelBand Roformer | Karaoke V2 by Gabox",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "mel_band_roformer_karaoke_becruily.ckpt",
+    "name": "Roformer Model: MelBand Roformer | Karaoke by becruily",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "bs_roformer_karaoke_frazer_becruily.ckpt",
+    "name": "Roformer Model: BS Roformer | Karaoke by frazer-becruily",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "bs_roformer_karaoke_anvuew.ckpt",
+    "name": "Roformer Model: BS Roformer | Karaoke by anvuew",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   }
+  ],
+  "男女声/和声": [
+   {
+    "file": "model_chorus_bs_roformer_ep_267_sdr_24.1275.ckpt",
+    "name": "Roformer Model: BS Roformer | Chorus Male-Female by Sucial",
+    "stems": [
+     "male",
+     "female"
+    ],
+    "sdr": {
+     "male": null,
+     "female": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "bs_roformer_male_female_by_aufr33_sdr_7.2889.ckpt",
+    "name": "Roformer Model: BS Roformer | Male-Female by aufr33",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   }
+  ],
+  "修复（去混响/降噪/去回声）": [
+   {
+    "file": "UVR-De-Echo-Aggressive.pth",
+    "name": "VR Arch Single Model v5: UVR-De-Echo-Aggressive by FoxJoy",
+    "stems": [
+     "no echo*",
+     "echo"
+    ],
+    "sdr": {
+     "no echo": null,
+     "echo": null
+    },
+    "peak": -1,
+    "type": "VR"
+   },
+   {
+    "file": "UVR-De-Echo-Normal.pth",
+    "name": "VR Arch Single Model v5: UVR-De-Echo-Normal by FoxJoy",
+    "stems": [
+     "no echo*",
+     "echo"
+    ],
+    "sdr": {
+     "no echo": null,
+     "echo": null
+    },
+    "peak": -1,
+    "type": "VR"
+   },
+   {
+    "file": "UVR-DeEcho-DeReverb.pth",
+    "name": "VR Arch Single Model v5: UVR-DeEcho-DeReverb by FoxJoy",
+    "stems": [
+     "no reverb*",
+     "reverb"
+    ],
+    "sdr": {
+     "no reverb": null,
+     "reverb": null
+    },
+    "peak": -1,
+    "type": "VR"
+   },
+   {
+    "file": "UVR-DeNoise-Lite.pth",
+    "name": "VR Arch Single Model v5: UVR-DeNoise-Lite by FoxJoy",
+    "stems": [
+     "noise*",
+     "no noise"
+    ],
+    "sdr": {
+     "noise": null,
+     "no noise": null
+    },
+    "peak": -1,
+    "type": "VR"
+   },
+   {
+    "file": "UVR-DeNoise.pth",
+    "name": "VR Arch Single Model v5: UVR-DeNoise by FoxJoy",
+    "stems": [
+     "noise*",
+     "no noise"
+    ],
+    "sdr": {
+     "noise": null,
+     "no noise": null
+    },
+    "peak": -1,
+    "type": "VR"
+   },
+   {
+    "file": "UVR-De-Reverb-aufr33-jarredou.pth",
+    "name": "VR Arch Single Model v4: UVR-De-Reverb by aufr33-jarredou",
+    "stems": [
+     "dry*",
+     "no dry"
+    ],
+    "sdr": {
+     "dry": null,
+     "no dry": null
+    },
+    "peak": -1,
+    "type": "VR"
+   },
+   {
+    "file": "Reverb_HQ_By_FoxJoy.onnx",
+    "name": "MDX-Net Model: Reverb HQ By FoxJoy",
+    "stems": [
+     "reverb*",
+     "no reverb"
+    ],
+    "sdr": {
+     "reverb": null,
+     "no reverb": null
+    },
+    "peak": -1,
+    "type": "MDX"
+   },
+   {
+    "file": "MDX23C-De-Reverb-aufr33-jarredou.ckpt",
+    "name": "MDX23C Model: MDX23C De-Reverb by aufr33-jarredou",
+    "stems": [
+     "dry",
+     "no dry"
+    ],
+    "sdr": {
+     "dry": null,
+     "no dry": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "denoise_mel_band_roformer_aufr33_sdr_27.9959.ckpt",
+    "name": "Roformer Model: Mel-Roformer-Denoise-Aufr33",
+    "stems": [
+     "dry*",
+     "other"
+    ],
+    "sdr": {
+     "dry": null,
+     "other": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "denoise_mel_band_roformer_aufr33_aggr_sdr_27.9768.ckpt",
+    "name": "Roformer Model: Mel-Roformer-Denoise-Aufr33-Aggr",
+    "stems": [
+     "dry*",
+     "other"
+    ],
+    "sdr": {
+     "dry": null,
+     "other": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "mel_band_roformer_denoise_debleed_gabox.ckpt",
+    "name": "Roformer Model: MelBand Roformer | Denoise-Debleed by Gabox",
+    "stems": [
+     "Unknown"
+    ],
+    "sdr": {
+     "unknown": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   },
+   {
+    "file": "deverb_bs_roformer_8_384dim_10depth.ckpt",
+    "name": "Roformer Model: BS-Roformer-De-Reverb",
+    "stems": [
+     "noreverb*",
+     "reverb"
+    ],
+    "sdr": {
+     "noreverb": null,
+     "reverb": null
+    },
+    "peak": -1,
+    "type": "MDXC"
+   }
+  ],
+  "MDX / 经典": [
+   {
+    "file": "UVR-MDX-NET-Inst_HQ_4.onnx",
+    "name": "MDX-Net Model: UVR-MDX-NET Inst HQ 4",
+    "stems": [
+     "instrumental* (15.5)",
+     "vocals (8.8)"
+    ],
+    "sdr": {
+     "instrumental": 15.5,
+     "vocals": 8.8
+    },
+    "peak": 15.5,
+    "type": "MDX"
+   },
+   {
+    "file": "Kim_Vocal_1.onnx",
+    "name": "MDX-Net Model: Kim Vocal 1",
+    "stems": [
+     "vocals* (10.1)",
+     "instrumental (15.5)"
+    ],
+    "sdr": {
+     "vocals": 10.1,
+     "instrumental": 15.5
+    },
+    "peak": 15.5,
+    "type": "MDX"
+   },
+   {
+    "file": "Kim_Inst.onnx",
+    "name": "MDX-Net Model: Kim Inst",
+    "stems": [
+     "instrumental* (15.5)",
+     "vocals (9.1)"
+    ],
+    "sdr": {
+     "instrumental": 15.5,
+     "vocals": 9.1
+    },
+    "peak": 15.5,
+    "type": "MDX"
+   },
+   {
+    "file": "UVR-MDX-NET_Main_427.onnx",
+    "name": "MDX-Net Model VIP: UVR-MDX-NET_Main_427",
+    "stems": [
+     "vocals* (10.2)",
+     "instrumental (15.5)"
+    ],
+    "sdr": {
+     "vocals": 10.2,
+     "instrumental": 15.5
+    },
+    "peak": 15.5,
+    "type": "MDX"
+   },
+   {
+    "file": "UVR-MDX-NET-Inst_HQ_1.onnx",
+    "name": "MDX-Net Model: UVR-MDX-NET Inst HQ 1",
+    "stems": [
+     "instrumental* (15.4)",
+     "vocals (8.8)"
+    ],
+    "sdr": {
+     "instrumental": 15.4,
+     "vocals": 8.8
+    },
+    "peak": 15.4,
+    "type": "MDX"
+   },
+   {
+    "file": "UVR-MDX-NET-Inst_HQ_3.onnx",
+    "name": "MDX-Net Model: UVR-MDX-NET Inst HQ 3",
+    "stems": [
+     "instrumental* (15.4)",
+     "vocals (8.8)"
+    ],
+    "sdr": {
+     "instrumental": 15.4,
+     "vocals": 8.8
+    },
+    "peak": 15.4,
+    "type": "MDX"
+   },
+   {
+    "file": "UVR_MDXNET_Main.onnx",
+    "name": "MDX-Net Model: UVR-MDX-NET Main",
+    "stems": [
+     "vocals* (10.2)",
+     "instrumental (15.4)"
+    ],
+    "sdr": {
+     "vocals": 10.2,
+     "instrumental": 15.4
+    },
+    "peak": 15.4,
+    "type": "MDX"
+   },
+   {
+    "file": "UVR-MDX-NET-Voc_FT.onnx",
+    "name": "MDX-Net Model: UVR-MDX-NET Voc FT",
+    "stems": [
+     "vocals* (10.2)",
+     "instrumental (15.4)"
+    ],
+    "sdr": {
+     "vocals": 10.2,
+     "instrumental": 15.4
+    },
+    "peak": 15.4,
+    "type": "MDX"
+   },
+   {
+    "file": "Kim_Vocal_2.onnx",
+    "name": "MDX-Net Model: Kim Vocal 2",
+    "stems": [
+     "vocals* (10.2)",
+     "instrumental (15.4)"
+    ],
+    "sdr": {
+     "vocals": 10.2,
+     "instrumental": 15.4
+    },
+    "peak": 15.4,
+    "type": "MDX"
+   },
+   {
+    "file": "UVR-MDX-NET_Main_340.onnx",
+    "name": "MDX-Net Model VIP: UVR-MDX-NET_Main_340",
+    "stems": [
+     "vocals* (10.2)",
+     "instrumental (15.4)"
+    ],
+    "sdr": {
+     "vocals": 10.2,
+     "instrumental": 15.4
+    },
+    "peak": 15.4,
+    "type": "MDX"
+   },
+   {
+    "file": "UVR-MDX-NET-Inst_HQ_2.onnx",
+    "name": "MDX-Net Model: UVR-MDX-NET Inst HQ 2",
+    "stems": [
+     "instrumental* (15.3)",
+     "vocals (8.8)"
+    ],
+    "sdr": {
+     "instrumental": 15.3,
+     "vocals": 8.8
+    },
+    "peak": 15.3,
+    "type": "MDX"
+   },
+   {
+    "file": "UVR-MDX-NET-Inst_HQ_5.onnx",
+    "name": "MDX-Net Model: UVR-MDX-NET Inst HQ 5",
+    "stems": [
+     "instrumental* (15.3)",
+     "vocals (8.7)"
+    ],
+    "sdr": {
+     "instrumental": 15.3,
+     "vocals": 8.7
+    },
+    "peak": 15.3,
+    "type": "MDX"
+   }
+  ]
+ },
+ "all": [
+  {
+   "file": "model_bs_roformer_ep_317_sdr_12.9755.ckpt",
+   "name": "Roformer Model: BS-Roformer-Viperx-1297",
+   "stems": [
+    "vocals* (11.8)",
+    "instrumental (16.5)"
+   ],
+   "sdr": {
+    "vocals": 11.8,
+    "instrumental": 16.5
+   },
+   "peak": 16.5,
+   "type": "MDXC"
+  },
+  {
+   "file": "model_bs_roformer_ep_368_sdr_12.9628.ckpt",
+   "name": "Roformer Model: BS-Roformer-Viperx-1296",
+   "stems": [
+    "vocals* (12.1)",
+    "instrumental (16.3)"
+   ],
+   "sdr": {
+    "vocals": 12.1,
+    "instrumental": 16.3
+   },
+   "peak": 16.3,
+   "type": "MDXC"
+  },
+  {
+   "file": "melband_roformer_inst_v2.ckpt",
+   "name": "Roformer Model: MelBand Roformer Kim | Inst V2 by Unwa",
+   "stems": [
+    "instrumental* (16.1)",
+    "vocals (10.3)"
+   ],
+   "sdr": {
+    "instrumental": 16.1,
+    "vocals": 10.3
+   },
+   "peak": 16.1,
+   "type": "MDXC"
+  },
+  {
+   "file": "melband_roformer_instvoc_duality_v1.ckpt",
+   "name": "Roformer Model: MelBand Roformer Kim | InstVoc Duality V1 by Unwa",
+   "stems": [
+    "vocals (11.0)",
+    "instrumental (16.1)"
+   ],
+   "sdr": {
+    "vocals": 11.0,
+    "instrumental": 16.1
+   },
+   "peak": 16.1,
+   "type": "MDXC"
+  },
+  {
+   "file": "melband_roformer_instvox_duality_v2.ckpt",
+   "name": "Roformer Model: MelBand Roformer Kim | InstVoc Duality V2 by Unwa",
+   "stems": [
+    "vocals (11.0)",
+    "instrumental (16.1)"
+   ],
+   "sdr": {
+    "vocals": 11.0,
+    "instrumental": 16.1
+   },
+   "peak": 16.1,
+   "type": "MDXC"
+  },
+  {
+   "file": "MDX23C-8KFFT-InstVoc_HQ_2.ckpt",
+   "name": "MDX23C Model VIP: MDX23C-InstVoc HQ 2",
+   "stems": [
+    "vocals (10.5)",
+    "instrumental (15.9)"
+   ],
+   "sdr": {
+    "vocals": 10.5,
+    "instrumental": 15.9
+   },
+   "peak": 15.9,
+   "type": "MDXC"
+  },
+  {
+   "file": "melband_roformer_inst_v1.ckpt",
+   "name": "Roformer Model: MelBand Roformer Kim | Inst V1 by Unwa",
+   "stems": [
+    "instrumental* (15.9)",
+    "vocals (9.8)"
+   ],
+   "sdr": {
+    "instrumental": 15.9,
+    "vocals": 9.8
+   },
+   "peak": 15.9,
+   "type": "MDXC"
+  },
+  {
+   "file": "MDX23C-8KFFT-InstVoc_HQ.ckpt",
+   "name": "MDX23C Model: MDX23C-InstVoc HQ",
+   "stems": [
+    "vocals (10.6)",
+    "instrumental (15.8)"
+   ],
+   "sdr": {
+    "vocals": 10.6,
+    "instrumental": 15.8
+   },
+   "peak": 15.8,
+   "type": "MDXC"
+  },
+  {
+   "file": "melband_roformer_inst_v1e.ckpt",
+   "name": "Roformer Model: MelBand Roformer Kim | Inst V1 (E) by Unwa",
+   "stems": [
+    "instrumental* (15.8)",
+    "vocals (9.6)"
+   ],
+   "sdr": {
+    "instrumental": 15.8,
+    "vocals": 9.6
+   },
+   "peak": 15.8,
+   "type": "MDXC"
+  },
+  {
+   "file": "UVR-MDX-NET-Inst_HQ_4.onnx",
+   "name": "MDX-Net Model: UVR-MDX-NET Inst HQ 4",
+   "stems": [
+    "instrumental* (15.5)",
+    "vocals (8.8)"
+   ],
+   "sdr": {
+    "instrumental": 15.5,
+    "vocals": 8.8
+   },
+   "peak": 15.5,
+   "type": "MDX"
+  },
+  {
+   "file": "Kim_Vocal_1.onnx",
+   "name": "MDX-Net Model: Kim Vocal 1",
+   "stems": [
+    "vocals* (10.1)",
+    "instrumental (15.5)"
+   ],
+   "sdr": {
+    "vocals": 10.1,
+    "instrumental": 15.5
+   },
+   "peak": 15.5,
+   "type": "MDX"
+  },
+  {
+   "file": "Kim_Inst.onnx",
+   "name": "MDX-Net Model: Kim Inst",
+   "stems": [
+    "instrumental* (15.5)",
+    "vocals (9.1)"
+   ],
+   "sdr": {
+    "instrumental": 15.5,
+    "vocals": 9.1
+   },
+   "peak": 15.5,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR-MDX-NET_Main_427.onnx",
+   "name": "MDX-Net Model VIP: UVR-MDX-NET_Main_427",
+   "stems": [
+    "vocals* (10.2)",
+    "instrumental (15.5)"
+   ],
+   "sdr": {
+    "vocals": 10.2,
+    "instrumental": 15.5
+   },
+   "peak": 15.5,
+   "type": "MDX"
+  },
+  {
+   "file": "MDX23C_D1581.ckpt",
+   "name": "MDX23C Model VIP: MDX23C_D1581",
+   "stems": [
+    "vocals (10.0)",
+    "instrumental (15.5)"
+   ],
+   "sdr": {
+    "vocals": 10.0,
+    "instrumental": 15.5
+   },
+   "peak": 15.5,
+   "type": "MDXC"
+  },
+  {
+   "file": "UVR-MDX-NET-Inst_HQ_1.onnx",
+   "name": "MDX-Net Model: UVR-MDX-NET Inst HQ 1",
+   "stems": [
+    "instrumental* (15.4)",
+    "vocals (8.8)"
+   ],
+   "sdr": {
+    "instrumental": 15.4,
+    "vocals": 8.8
+   },
+   "peak": 15.4,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR-MDX-NET-Inst_HQ_3.onnx",
+   "name": "MDX-Net Model: UVR-MDX-NET Inst HQ 3",
+   "stems": [
+    "instrumental* (15.4)",
+    "vocals (8.8)"
+   ],
+   "sdr": {
+    "instrumental": 15.4,
+    "vocals": 8.8
+   },
+   "peak": 15.4,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR_MDXNET_Main.onnx",
+   "name": "MDX-Net Model: UVR-MDX-NET Main",
+   "stems": [
+    "vocals* (10.2)",
+    "instrumental (15.4)"
+   ],
+   "sdr": {
+    "vocals": 10.2,
+    "instrumental": 15.4
+   },
+   "peak": 15.4,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR-MDX-NET-Voc_FT.onnx",
+   "name": "MDX-Net Model: UVR-MDX-NET Voc FT",
+   "stems": [
+    "vocals* (10.2)",
+    "instrumental (15.4)"
+   ],
+   "sdr": {
+    "vocals": 10.2,
+    "instrumental": 15.4
+   },
+   "peak": 15.4,
+   "type": "MDX"
+  },
+  {
+   "file": "Kim_Vocal_2.onnx",
+   "name": "MDX-Net Model: Kim Vocal 2",
+   "stems": [
+    "vocals* (10.2)",
+    "instrumental (15.4)"
+   ],
+   "sdr": {
+    "vocals": 10.2,
+    "instrumental": 15.4
+   },
+   "peak": 15.4,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR-MDX-NET_Main_340.onnx",
+   "name": "MDX-Net Model VIP: UVR-MDX-NET_Main_340",
+   "stems": [
+    "vocals* (10.2)",
+    "instrumental (15.4)"
+   ],
+   "sdr": {
+    "vocals": 10.2,
+    "instrumental": 15.4
+   },
+   "peak": 15.4,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR-MDX-NET-Inst_HQ_2.onnx",
+   "name": "MDX-Net Model: UVR-MDX-NET Inst HQ 2",
+   "stems": [
+    "instrumental* (15.3)",
+    "vocals (8.8)"
+   ],
+   "sdr": {
+    "instrumental": 15.3,
+    "vocals": 8.8
+   },
+   "peak": 15.3,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR-MDX-NET-Inst_HQ_5.onnx",
+   "name": "MDX-Net Model: UVR-MDX-NET Inst HQ 5",
+   "stems": [
+    "instrumental* (15.3)",
+    "vocals (8.7)"
+   ],
+   "sdr": {
+    "instrumental": 15.3,
+    "vocals": 8.7
+   },
+   "peak": 15.3,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR-MDX-NET-Inst_2.onnx",
+   "name": "MDX-Net Model: UVR-MDX-NET Inst 2",
+   "stems": [
+    "instrumental* (15.3)",
+    "vocals (9.2)"
+   ],
+   "sdr": {
+    "instrumental": 15.3,
+    "vocals": 9.2
+   },
+   "peak": 15.3,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR-MDX-NET-Inst_3.onnx",
+   "name": "MDX-Net Model: UVR-MDX-NET Inst 3",
+   "stems": [
+    "instrumental* (15.3)",
+    "vocals (9.2)"
+   ],
+   "sdr": {
+    "instrumental": 15.3,
+    "vocals": 9.2
+   },
+   "peak": 15.3,
+   "type": "MDX"
+  },
+  {
+   "file": "kuielab_a_vocals.onnx",
+   "name": "MDX-Net Model: kuielab_a_vocals",
+   "stems": [
+    "vocals* (9.6)",
+    "instrumental (15.3)"
+   ],
+   "sdr": {
+    "vocals": 9.6,
+    "instrumental": 15.3
+   },
+   "peak": 15.3,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR-MDX-NET_Main_406.onnx",
+   "name": "MDX-Net Model VIP: UVR-MDX-NET_Main_406",
+   "stems": [
+    "vocals* (10.4)",
+    "instrumental (15.3)"
+   ],
+   "sdr": {
+    "vocals": 10.4,
+    "instrumental": 15.3
+   },
+   "peak": 15.3,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR-MDX-NET_Main_438.onnx",
+   "name": "MDX-Net Model VIP: UVR-MDX-NET_Main_438",
+   "stems": [
+    "vocals* (10.1)",
+    "instrumental (15.3)"
+   ],
+   "sdr": {
+    "vocals": 10.1,
+    "instrumental": 15.3
+   },
+   "peak": 15.3,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR-MDX-NET-Inst_1.onnx",
+   "name": "MDX-Net Model: UVR-MDX-NET Inst 1",
+   "stems": [
+    "instrumental* (15.2)",
+    "vocals (9.2)"
+   ],
+   "sdr": {
+    "instrumental": 15.2,
+    "vocals": 9.2
+   },
+   "peak": 15.2,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR-MDX-NET-Inst_Main.onnx",
+   "name": "MDX-Net Model: UVR-MDX-NET Inst Main",
+   "stems": [
+    "instrumental* (15.1)",
+    "vocals (8.5)"
+   ],
+   "sdr": {
+    "instrumental": 15.1,
+    "vocals": 8.5
+   },
+   "peak": 15.1,
+   "type": "MDX"
+  },
+  {
+   "file": "kuielab_b_vocals.onnx",
+   "name": "MDX-Net Model: kuielab_b_vocals",
+   "stems": [
+    "vocals* (9.0)",
+    "instrumental (15.1)"
+   ],
+   "sdr": {
+    "vocals": 9.0,
+    "instrumental": 15.1
+   },
+   "peak": 15.1,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR-MDX-NET-Inst_full_292.onnx",
+   "name": "MDX-Net Model VIP: UVR-MDX-NET-Inst_full_292",
+   "stems": [
+    "instrumental* (15.1)",
+    "vocals (8.5)"
+   ],
+   "sdr": {
+    "instrumental": 15.1,
+    "vocals": 8.5
+   },
+   "peak": 15.1,
+   "type": "MDX"
+  },
+  {
+   "file": "model_mel_band_roformer_ep_3005_sdr_11.4360.ckpt",
+   "name": "Roformer Model: Mel-Roformer-Viperx-1143",
+   "stems": [
+    "vocals* (10.5)",
+    "instrumental (15.1)"
+   ],
+   "sdr": {
+    "vocals": 10.5,
+    "instrumental": 15.1
+   },
+   "peak": 15.1,
+   "type": "MDXC"
+  },
+  {
+   "file": "UVR_MDXNET_1_9703.onnx",
+   "name": "MDX-Net Model: UVR-MDX-NET 1",
+   "stems": [
+    "vocals* (9.6)",
+    "instrumental (15.0)"
+   ],
+   "sdr": {
+    "vocals": 9.6,
+    "instrumental": 15.0
+   },
+   "peak": 15.0,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR_MDXNET_2_9682.onnx",
+   "name": "MDX-Net Model: UVR-MDX-NET 2",
+   "stems": [
+    "vocals* (9.4)",
+    "instrumental (15.0)"
+   ],
+   "sdr": {
+    "vocals": 9.4,
+    "instrumental": 15.0
+   },
+   "peak": 15.0,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR_MDXNET_3_9662.onnx",
+   "name": "MDX-Net Model: UVR-MDX-NET 3",
+   "stems": [
+    "vocals* (9.7)",
+    "instrumental (15.0)"
+   ],
+   "sdr": {
+    "vocals": 9.7,
+    "instrumental": 15.0
+   },
+   "peak": 15.0,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR_MDXNET_9482.onnx",
+   "name": "MDX-Net Model: UVR_MDXNET_9482",
+   "stems": [
+    "vocals* (9.3)",
+    "instrumental (14.9)"
+   ],
+   "sdr": {
+    "vocals": 9.3,
+    "instrumental": 14.9
+   },
+   "peak": 14.9,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR_MDXNET_KARA_2.onnx",
+   "name": "MDX-Net Model: UVR-MDX-NET Karaoke 2",
+   "stems": [
+    "instrumental* (14.8)",
+    "vocals (5.4)"
+   ],
+   "sdr": {
+    "instrumental": 14.8,
+    "vocals": 5.4
+   },
+   "peak": 14.8,
+   "type": "MDX"
+  },
+  {
+   "file": "mel_band_roformer_karaoke_aufr33_viperx_sdr_10.1956.ckpt",
+   "name": "Roformer Model: Mel-Roformer-Karaoke-Aufr33-Viperx",
+   "stems": [
+    "vocals* (8.4)",
+    "instrumental (14.7)"
+   ],
+   "sdr": {
+    "vocals": 8.4,
+    "instrumental": 14.7
+   },
+   "peak": 14.7,
+   "type": "MDXC"
+  },
+  {
+   "file": "UVR-MDX-NET_Inst_82_beta.onnx",
+   "name": "MDX-Net Model VIP: UVR-MDX-NET_Inst_82_beta",
+   "stems": [
+    "instrumental* (14.3)",
+    "vocals (8.2)"
+   ],
+   "sdr": {
+    "instrumental": 14.3,
+    "vocals": 8.2
+   },
+   "peak": 14.3,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR-MDX-NET_Inst_187_beta.onnx",
+   "name": "MDX-Net Model VIP: UVR-MDX-NET_Inst_187_beta",
+   "stems": [
+    "instrumental* (14.3)",
+    "vocals (8.5)"
+   ],
+   "sdr": {
+    "instrumental": 14.3,
+    "vocals": 8.5
+   },
+   "peak": 14.3,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR_MDXNET_KARA.onnx",
+   "name": "MDX-Net Model: UVR-MDX-NET Karaoke",
+   "stems": [
+    "vocals* (5.6)",
+    "instrumental (14.1)"
+   ],
+   "sdr": {
+    "vocals": 5.6,
+    "instrumental": 14.1
+   },
+   "peak": 14.1,
+   "type": "MDX"
+  },
+  {
+   "file": "3_HP-Vocal-UVR.pth",
+   "name": "VR Arch Single Model v5: 3_HP-Vocal-UVR",
+   "stems": [
+    "vocals* (8.2)",
+    "instrumental (14.0)"
+   ],
+   "sdr": {
+    "vocals": 8.2,
+    "instrumental": 14.0
+   },
+   "peak": 14.0,
+   "type": "VR"
+  },
+  {
+   "file": "UVR-MDX-NET_Inst_90_beta.onnx",
+   "name": "MDX-Net Model VIP: UVR-MDX-NET_Inst_90_beta",
+   "stems": [
+    "instrumental* (13.9)",
+    "vocals (8.1)"
+   ],
+   "sdr": {
+    "instrumental": 13.9,
+    "vocals": 8.1
+   },
+   "peak": 13.9,
+   "type": "MDX"
+  },
+  {
+   "file": "11_SP-UVR-2B-32000-2.pth",
+   "name": "VR Arch Single Model v5: 11_SP-UVR-2B-32000-2",
+   "stems": [
+    "instrumental* (13.8)",
+    "vocals (7.3)"
+   ],
+   "sdr": {
+    "instrumental": 13.8,
+    "vocals": 7.3
+   },
+   "peak": 13.8,
+   "type": "VR"
+  },
+  {
+   "file": "1_HP-UVR.pth",
+   "name": "VR Arch Single Model v5: 1_HP-UVR",
+   "stems": [
+    "instrumental* (13.7)",
+    "vocals (7.9)"
+   ],
+   "sdr": {
+    "instrumental": 13.7,
+    "vocals": 7.9
+   },
+   "peak": 13.7,
+   "type": "VR"
+  },
+  {
+   "file": "9_HP2-UVR.pth",
+   "name": "VR Arch Single Model v5: 9_HP2-UVR",
+   "stems": [
+    "instrumental* (13.7)",
+    "vocals (8.0)"
+   ],
+   "sdr": {
+    "instrumental": 13.7,
+    "vocals": 8.0
+   },
+   "peak": 13.7,
+   "type": "VR"
+  },
+  {
+   "file": "4_HP-Vocal-UVR.pth",
+   "name": "VR Arch Single Model v5: 4_HP-Vocal-UVR",
+   "stems": [
+    "vocals* (8.3)",
+    "instrumental (13.6)"
+   ],
+   "sdr": {
+    "vocals": 8.3,
+    "instrumental": 13.6
+   },
+   "peak": 13.6,
+   "type": "VR"
+  },
+  {
+   "file": "2_HP-UVR.pth",
+   "name": "VR Arch Single Model v5: 2_HP-UVR",
+   "stems": [
+    "instrumental* (13.5)",
+    "vocals (8.2)"
+   ],
+   "sdr": {
+    "instrumental": 13.5,
+    "vocals": 8.2
+   },
+   "peak": 13.5,
+   "type": "VR"
+  },
+  {
+   "file": "7_HP2-UVR.pth",
+   "name": "VR Arch Single Model v5: 7_HP2-UVR",
+   "stems": [
+    "instrumental* (13.5)",
+    "vocals (8.3)"
+   ],
+   "sdr": {
+    "instrumental": 13.5,
+    "vocals": 8.3
+   },
+   "peak": 13.5,
+   "type": "VR"
+  },
+  {
+   "file": "8_HP2-UVR.pth",
+   "name": "VR Arch Single Model v5: 8_HP2-UVR",
+   "stems": [
+    "instrumental* (13.5)",
+    "vocals (8.2)"
+   ],
+   "sdr": {
+    "instrumental": 13.5,
+    "vocals": 8.2
+   },
+   "peak": 13.5,
+   "type": "VR"
+  },
+  {
+   "file": "14_SP-UVR-4B-44100-2.pth",
+   "name": "VR Arch Single Model v5: 14_SP-UVR-4B-44100-2",
+   "stems": [
+    "instrumental* (13.5)",
+    "vocals (8.0)"
+   ],
+   "sdr": {
+    "instrumental": 13.5,
+    "vocals": 8.0
+   },
+   "peak": 13.5,
+   "type": "VR"
+  },
+  {
+   "file": "10_SP-UVR-2B-32000-1.pth",
+   "name": "VR Arch Single Model v5: 10_SP-UVR-2B-32000-1",
+   "stems": [
+    "instrumental* (13.3)",
+    "vocals (7.5)"
+   ],
+   "sdr": {
+    "instrumental": 13.3,
+    "vocals": 7.5
+   },
+   "peak": 13.3,
+   "type": "VR"
+  },
+  {
+   "file": "13_SP-UVR-4B-44100-1.pth",
+   "name": "VR Arch Single Model v5: 13_SP-UVR-4B-44100-1",
+   "stems": [
+    "instrumental* (13.3)",
+    "vocals (7.8)"
+   ],
+   "sdr": {
+    "instrumental": 13.3,
+    "vocals": 7.8
+   },
+   "peak": 13.3,
+   "type": "VR"
+  },
+  {
+   "file": "16_SP-UVR-MID-44100-2.pth",
+   "name": "VR Arch Single Model v5: 16_SP-UVR-MID-44100-2",
+   "stems": [
+    "instrumental* (13.3)",
+    "vocals (7.4)"
+   ],
+   "sdr": {
+    "instrumental": 13.3,
+    "vocals": 7.4
+   },
+   "peak": 13.3,
+   "type": "VR"
+  },
+  {
+   "file": "12_SP-UVR-3B-44100.pth",
+   "name": "VR Arch Single Model v5: 12_SP-UVR-3B-44100",
+   "stems": [
+    "instrumental* (13.1)",
+    "vocals (7.5)"
+   ],
+   "sdr": {
+    "instrumental": 13.1,
+    "vocals": 7.5
+   },
+   "peak": 13.1,
+   "type": "VR"
+  },
+  {
+   "file": "15_SP-UVR-MID-44100-1.pth",
+   "name": "VR Arch Single Model v5: 15_SP-UVR-MID-44100-1",
+   "stems": [
+    "instrumental* (13.1)",
+    "vocals (7.5)"
+   ],
+   "sdr": {
+    "instrumental": 13.1,
+    "vocals": 7.5
+   },
+   "peak": 13.1,
+   "type": "VR"
+  },
+  {
+   "file": "MGM_LOWEND_B_v4.pth",
+   "name": "VR Arch Single Model v4: MGM_LOWEND_B_v4",
+   "stems": [
+    "instrumental* (13.1)",
+    "vocals (7.5)"
+   ],
+   "sdr": {
+    "instrumental": 13.1,
+    "vocals": 7.5
+   },
+   "peak": 13.1,
+   "type": "VR"
+  },
+  {
+   "file": "6_HP-Karaoke-UVR.pth",
+   "name": "VR Arch Single Model v5: 6_HP-Karaoke-UVR",
+   "stems": [
+    "instrumental* (13.0)",
+    "vocals (4.6)"
+   ],
+   "sdr": {
+    "instrumental": 13.0,
+    "vocals": 4.6
+   },
+   "peak": 13.0,
+   "type": "VR"
+  },
+  {
+   "file": "MGM_LOWEND_A_v4.pth",
+   "name": "VR Arch Single Model v4: MGM_LOWEND_A_v4",
+   "stems": [
+    "instrumental* (13.0)",
+    "vocals (7.0)"
+   ],
+   "sdr": {
+    "instrumental": 13.0,
+    "vocals": 7.0
+   },
+   "peak": 13.0,
+   "type": "VR"
+  },
+  {
+   "file": "vocals_mel_band_roformer.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Vocals by Kimberley Jensen",
+   "stems": [
+    "vocals* (12.6)",
+    "other"
+   ],
+   "sdr": {
+    "vocals": 12.6,
+    "other": null
+   },
+   "peak": 12.6,
+   "type": "MDXC"
+  },
+  {
+   "file": "melband_roformer_big_beta4.ckpt",
+   "name": "Roformer Model: MelBand Roformer Kim | Big Beta 4 FT by unwa",
+   "stems": [
+    "vocals* (12.5)",
+    "other"
+   ],
+   "sdr": {
+    "vocals": 12.5,
+    "other": null
+   },
+   "peak": 12.5,
+   "type": "MDXC"
+  },
+  {
+   "file": "MGM_MAIN_v4.pth",
+   "name": "VR Arch Single Model v4: MGM_MAIN_v4",
+   "stems": [
+    "instrumental* (12.4)",
+    "vocals (6.2)"
+   ],
+   "sdr": {
+    "instrumental": 12.4,
+    "vocals": 6.2
+   },
+   "peak": 12.4,
+   "type": "VR"
+  },
+  {
+   "file": "mel_band_roformer_kim_ft_unwa.ckpt",
+   "name": "Roformer Model: MelBand Roformer Kim | FT by unwa",
+   "stems": [
+    "vocals* (12.4)",
+    "other"
+   ],
+   "sdr": {
+    "vocals": 12.4,
+    "other": null
+   },
+   "peak": 12.4,
+   "type": "MDXC"
+  },
+  {
+   "file": "melband_roformer_big_beta5e.ckpt",
+   "name": "Roformer Model: MelBand Roformer Kim | Big Beta 5e FT by unwa",
+   "stems": [
+    "vocals* (12.4)",
+    "other"
+   ],
+   "sdr": {
+    "vocals": 12.4,
+    "other": null
+   },
+   "peak": 12.4,
+   "type": "MDXC"
+  },
+  {
+   "file": "MGM_HIGHEND_v4.pth",
+   "name": "VR Arch Single Model v4: MGM_HIGHEND_v4",
+   "stems": [
+    "instrumental* (12.3)",
+    "vocals (6.9)"
+   ],
+   "sdr": {
+    "instrumental": 12.3,
+    "vocals": 6.9
+   },
+   "peak": 12.3,
+   "type": "VR"
+  },
+  {
+   "file": "MelBandRoformerBigSYHFTV1.ckpt",
+   "name": "Roformer Model: MelBand Roformer Kim | Big SYHFT V1 by SYH99999",
+   "stems": [
+    "vocals* (12.3)",
+    "other"
+   ],
+   "sdr": {
+    "vocals": 12.3,
+    "other": null
+   },
+   "peak": 12.3,
+   "type": "MDXC"
+  },
+  {
+   "file": "5_HP-Karaoke-UVR.pth",
+   "name": "VR Arch Single Model v5: 5_HP-Karaoke-UVR",
+   "stems": [
+    "instrumental* (12.2)",
+    "vocals (5.2)"
+   ],
+   "sdr": {
+    "instrumental": 12.2,
+    "vocals": 5.2
+   },
+   "peak": 12.2,
+   "type": "VR"
+  },
+  {
+   "file": "hdemucs_mmi.yaml",
+   "name": "Demucs v4: hdemucs_mmi",
+   "stems": [
+    "vocals (10.2)",
+    "drums (9.6)",
+    "bass (12.2)",
+    "other"
+   ],
+   "sdr": {
+    "vocals": 10.2,
+    "drums": 9.6,
+    "bass": 12.2,
+    "other": null
+   },
+   "peak": 12.2,
+   "type": "Demucs"
+  },
+  {
+   "file": "htdemucs_ft.yaml",
+   "name": "Demucs v4: htdemucs_ft",
+   "stems": [
+    "vocals (10.8)",
+    "drums (10.0)",
+    "bass (12.0)",
+    "other"
+   ],
+   "sdr": {
+    "vocals": 10.8,
+    "drums": 10.0,
+    "bass": 12.0,
+    "other": null
+   },
+   "peak": 12.0,
+   "type": "Demucs"
+  },
+  {
+   "file": "htdemucs.yaml",
+   "name": "Demucs v4: htdemucs",
+   "stems": [
+    "vocals (9.9)",
+    "drums (9.4)",
+    "bass (11.6)",
+    "other"
+   ],
+   "sdr": {
+    "vocals": 9.9,
+    "drums": 9.4,
+    "bass": 11.6,
+    "other": null
+   },
+   "peak": 11.6,
+   "type": "Demucs"
+  },
+  {
+   "file": "kuielab_a_bass.onnx",
+   "name": "MDX-Net Model: kuielab_a_bass",
+   "stems": [
+    "bass* (10.4)",
+    "no bass"
+   ],
+   "sdr": {
+    "bass": 10.4,
+    "no bass": null
+   },
+   "peak": 10.4,
+   "type": "MDX"
+  },
+  {
+   "file": "htdemucs_6s.yaml",
+   "name": "Demucs v4: htdemucs_6s",
+   "stems": [
+    "vocals (9.6)",
+    "drums (8.5)",
+    "bass (10.1)",
+    "guitar",
+    "piano",
+    "other"
+   ],
+   "sdr": {
+    "vocals": 9.6,
+    "drums": 8.5,
+    "bass": 10.1,
+    "guitar": null,
+    "piano": null,
+    "other": null
+   },
+   "peak": 10.1,
+   "type": "Demucs"
+  },
+  {
+   "file": "kuielab_b_bass.onnx",
+   "name": "MDX-Net Model: kuielab_b_bass",
+   "stems": [
+    "bass* (9.9)",
+    "no bass"
+   ],
+   "sdr": {
+    "bass": 9.9,
+    "no bass": null
+   },
+   "peak": 9.9,
+   "type": "MDX"
+  },
+  {
+   "file": "MelBandRoformerSYHFTV3Epsilon.ckpt",
+   "name": "Roformer Model: MelBand Roformer Kim | SYHFT V3 by SYH99999",
+   "stems": [
+    "vocals* (9.5)",
+    "other"
+   ],
+   "sdr": {
+    "vocals": 9.5,
+    "other": null
+   },
+   "peak": 9.5,
+   "type": "MDXC"
+  },
+  {
+   "file": "UVR-MDX-NET_Main_390.onnx",
+   "name": "MDX-Net Model VIP: UVR-MDX-NET_Main_390",
+   "stems": [
+    "vocals* (4.5)",
+    "instrumental (8.8)"
+   ],
+   "sdr": {
+    "vocals": 4.5,
+    "instrumental": 8.8
+   },
+   "peak": 8.8,
+   "type": "MDX"
+  },
+  {
+   "file": "MelBandRoformerSYHFTV2.ckpt",
+   "name": "Roformer Model: MelBand Roformer Kim | SYHFT V2 by SYH99999",
+   "stems": [
+    "vocals* (8.6)",
+    "other"
+   ],
+   "sdr": {
+    "vocals": 8.6,
+    "other": null
+   },
+   "peak": 8.6,
+   "type": "MDXC"
+  },
+  {
+   "file": "MelBandRoformerSYHFTV2.5.ckpt",
+   "name": "Roformer Model: MelBand Roformer Kim | SYHFT V2.5 by SYH99999",
+   "stems": [
+    "vocals* (8.5)",
+    "other"
+   ],
+   "sdr": {
+    "vocals": 8.5,
+    "other": null
+   },
+   "peak": 8.5,
+   "type": "MDXC"
+  },
+  {
+   "file": "MelBandRoformerSYHFT.ckpt",
+   "name": "Roformer Model: MelBand Roformer Kim | SYHFT by SYH99999",
+   "stems": [
+    "vocals* (8.0)",
+    "other"
+   ],
+   "sdr": {
+    "vocals": 8.0,
+    "other": null
+   },
+   "peak": 8.0,
+   "type": "MDXC"
+  },
+  {
+   "file": "UVR-BVE-4B_SN-44100-1.pth",
+   "name": "VR Arch Single Model v5: UVR-BVE-4B_SN-44100-1",
+   "stems": [
+    "vocals* (0.0)",
+    "instrumental (7.7)"
+   ],
+   "sdr": {
+    "vocals": 0.0,
+    "instrumental": 7.7
+   },
+   "peak": 7.7,
+   "type": "VR"
+  },
+  {
+   "file": "kuielab_b_drums.onnx",
+   "name": "MDX-Net Model: kuielab_b_drums",
+   "stems": [
+    "drums* (7.1)",
+    "no drums"
+   ],
+   "sdr": {
+    "drums": 7.1,
+    "no drums": null
+   },
+   "peak": 7.1,
+   "type": "MDX"
+  },
+  {
+   "file": "kuielab_a_drums.onnx",
+   "name": "MDX-Net Model: kuielab_a_drums",
+   "stems": [
+    "drums* (7.0)",
+    "no drums"
+   ],
+   "sdr": {
+    "drums": 7.0,
+    "no drums": null
+   },
+   "peak": 7.0,
+   "type": "MDX"
+  },
+  {
+   "file": "17_HP-Wind_Inst-UVR.pth",
+   "name": "VR Arch Single Model v5: 17_HP-Wind_Inst-UVR",
+   "stems": [
+    "no woodwinds*",
+    "woodwinds"
+   ],
+   "sdr": {
+    "no woodwinds": null,
+    "woodwinds": null
+   },
+   "peak": -1,
+   "type": "VR"
+  },
+  {
+   "file": "UVR-De-Echo-Aggressive.pth",
+   "name": "VR Arch Single Model v5: UVR-De-Echo-Aggressive by FoxJoy",
+   "stems": [
+    "no echo*",
+    "echo"
+   ],
+   "sdr": {
+    "no echo": null,
+    "echo": null
+   },
+   "peak": -1,
+   "type": "VR"
+  },
+  {
+   "file": "UVR-De-Echo-Normal.pth",
+   "name": "VR Arch Single Model v5: UVR-De-Echo-Normal by FoxJoy",
+   "stems": [
+    "no echo*",
+    "echo"
+   ],
+   "sdr": {
+    "no echo": null,
+    "echo": null
+   },
+   "peak": -1,
+   "type": "VR"
+  },
+  {
+   "file": "UVR-DeEcho-DeReverb.pth",
+   "name": "VR Arch Single Model v5: UVR-DeEcho-DeReverb by FoxJoy",
+   "stems": [
+    "no reverb*",
+    "reverb"
+   ],
+   "sdr": {
+    "no reverb": null,
+    "reverb": null
+   },
+   "peak": -1,
+   "type": "VR"
+  },
+  {
+   "file": "UVR-DeNoise-Lite.pth",
+   "name": "VR Arch Single Model v5: UVR-DeNoise-Lite by FoxJoy",
+   "stems": [
+    "noise*",
+    "no noise"
+   ],
+   "sdr": {
+    "noise": null,
+    "no noise": null
+   },
+   "peak": -1,
+   "type": "VR"
+  },
+  {
+   "file": "UVR-DeNoise.pth",
+   "name": "VR Arch Single Model v5: UVR-DeNoise by FoxJoy",
+   "stems": [
+    "noise*",
+    "no noise"
+   ],
+   "sdr": {
+    "noise": null,
+    "no noise": null
+   },
+   "peak": -1,
+   "type": "VR"
+  },
+  {
+   "file": "UVR-De-Reverb-aufr33-jarredou.pth",
+   "name": "VR Arch Single Model v4: UVR-De-Reverb by aufr33-jarredou",
+   "stems": [
+    "dry*",
+    "no dry"
+   ],
+   "sdr": {
+    "dry": null,
+    "no dry": null
+   },
+   "peak": -1,
+   "type": "VR"
+  },
+  {
+   "file": "UVR-BVE-4B_SN-44100-2.pth",
+   "name": "VR Arch Single Model v5: UVR-BVE-4B_SN-44100-2",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "VR"
+  },
+  {
+   "file": "Reverb_HQ_By_FoxJoy.onnx",
+   "name": "MDX-Net Model: Reverb HQ By FoxJoy",
+   "stems": [
+    "reverb*",
+    "no reverb"
+   ],
+   "sdr": {
+    "reverb": null,
+    "no reverb": null
+   },
+   "peak": -1,
+   "type": "MDX"
+  },
+  {
+   "file": "UVR-MDX-NET_Crowd_HQ_1.onnx",
+   "name": "MDX-Net Model: UVR-MDX-NET Crowd HQ 1 By Aufr33",
+   "stems": [
+    "no crowd*",
+    "crowd"
+   ],
+   "sdr": {
+    "no crowd": null,
+    "crowd": null
+   },
+   "peak": -1,
+   "type": "MDX"
+  },
+  {
+   "file": "kuielab_a_other.onnx",
+   "name": "MDX-Net Model: kuielab_a_other",
+   "stems": [
+    "other*",
+    "no other"
+   ],
+   "sdr": {
+    "other": null,
+    "no other": null
+   },
+   "peak": -1,
+   "type": "MDX"
+  },
+  {
+   "file": "kuielab_b_other.onnx",
+   "name": "MDX-Net Model: kuielab_b_other",
+   "stems": [
+    "other*",
+    "no other"
+   ],
+   "sdr": {
+    "other": null,
+    "no other": null
+   },
+   "peak": -1,
+   "type": "MDX"
+  },
+  {
+   "file": "model_bs_roformer_ep_937_sdr_10.5309.ckpt",
+   "name": "Roformer Model: BS-Roformer-Viperx-1053",
+   "stems": [
+    "no drum-bass*",
+    "drum-bass"
+   ],
+   "sdr": {
+    "no drum-bass": null,
+    "drum-bass": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "MDX23C-De-Reverb-aufr33-jarredou.ckpt",
+   "name": "MDX23C Model: MDX23C De-Reverb by aufr33-jarredou",
+   "stems": [
+    "dry",
+    "no dry"
+   ],
+   "sdr": {
+    "dry": null,
+    "no dry": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "MDX23C-DrumSep-aufr33-jarredou.ckpt",
+   "name": "MDX23C Model: MDX23C DrumSep by aufr33-jarredou",
+   "stems": [
+    "kick",
+    "snare",
+    "toms",
+    "hh",
+    "ride",
+    "crash"
+   ],
+   "sdr": {
+    "kick": null,
+    "snare": null,
+    "toms": null,
+    "hh": null,
+    "ride": null,
+    "crash": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_karaoke_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Karaoke by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_karaoke_gabox_v2.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Karaoke V2 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_karaoke_becruily.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Karaoke by becruily",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "bs_roformer_karaoke_frazer_becruily.ckpt",
+   "name": "Roformer Model: BS Roformer | Karaoke by frazer-becruily",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "bs_roformer_karaoke_anvuew.ckpt",
+   "name": "Roformer Model: BS Roformer | Karaoke by anvuew",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "denoise_mel_band_roformer_aufr33_sdr_27.9959.ckpt",
+   "name": "Roformer Model: Mel-Roformer-Denoise-Aufr33",
+   "stems": [
+    "dry*",
+    "other"
+   ],
+   "sdr": {
+    "dry": null,
+    "other": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "denoise_mel_band_roformer_aufr33_aggr_sdr_27.9768.ckpt",
+   "name": "Roformer Model: Mel-Roformer-Denoise-Aufr33-Aggr",
+   "stems": [
+    "dry*",
+    "other"
+   ],
+   "sdr": {
+    "dry": null,
+    "other": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_denoise_debleed_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Denoise-Debleed by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_crowd_aufr33_viperx_sdr_8.7144.ckpt",
+   "name": "Roformer Model: Mel-Roformer-Crowd-Aufr33-Viperx",
+   "stems": [
+    "crowd*",
+    "other"
+   ],
+   "sdr": {
+    "crowd": null,
+    "other": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "deverb_bs_roformer_8_384dim_10depth.ckpt",
+   "name": "Roformer Model: BS-Roformer-De-Reverb",
+   "stems": [
+    "noreverb*",
+    "reverb"
+   ],
+   "sdr": {
+    "noreverb": null,
+    "reverb": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_kim_ft2_unwa.ckpt",
+   "name": "Roformer Model: MelBand Roformer Kim | FT 2 by unwa",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_kim_ft2_bleedless_unwa.ckpt",
+   "name": "Roformer Model: MelBand Roformer Kim | FT 2 Bleedless by unwa",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_kim_ft3_unwa.ckpt",
+   "name": "Roformer Model: MelBand Roformer Kim | FT 3 by unwa",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "melband_roformer_inst_v1_plus.ckpt",
+   "name": "Roformer Model: MelBand Roformer Kim | Inst V1 Plus by Unwa",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "melband_roformer_inst_v1e_plus.ckpt",
+   "name": "Roformer Model: MelBand Roformer Kim | Inst V1 (E) Plus by Unwa",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "bs_roformer_vocals_revive_unwa.ckpt",
+   "name": "Roformer Model: BS Roformer | Vocals Revive by Unwa",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "bs_roformer_vocals_revive_v2_unwa.ckpt",
+   "name": "Roformer Model: BS Roformer | Vocals Revive V2 by Unwa",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "bs_roformer_vocals_revive_v3e_unwa.ckpt",
+   "name": "Roformer Model: BS Roformer | Vocals Revive V3e by Unwa",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_vocals_becruily.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Vocals by becruily",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_becruily.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Instrumental by becruily",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_vocal_fullness_aname.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Vocals Fullness by Aname",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "bs_roformer_vocals_gabox.ckpt",
+   "name": "Roformer Model: BS Roformer | Vocals by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_vocals_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Vocals by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_vocals_v2_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Vocals V2 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_vocals_fv1_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Vocals FV1 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_vocals_fv2_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Vocals FV2 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_vocals_fv3_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Vocals FV3 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_vocals_fv4_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Vocals FV4 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_vocals_fv5_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Vocals FV5 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_vocals_fv6_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Vocals FV6 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_vocals_fv7b_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Vocals FV7b by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Instrumental by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_2_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Instrumental 2 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_3_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Instrumental 3 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_bleedless_v1_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Instrumental Bleedless V1 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_bleedless_v2_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Instrumental Bleedless V2 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_bleedless_v3_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Instrumental Bleedless V3 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_fullness_v1_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Instrumental Fullness V1 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_fullness_v2_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Instrumental Fullness V2 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_fullness_v3_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Instrumental Fullness V3 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_fullness_v4_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Instrumental Fullness V4 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_fullness_noise_v4_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Instrumental Fullness Noisy V4 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_instv5_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | INSTV5 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_instv5n_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | INSTV5N by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_instv6_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | INSTV6 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_instv6n_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | INSTV6N by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_instv7_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | INSTV7 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_instv7n_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | INSTV7N by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_instv8_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | INSTV8 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_instv8n_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | INSTV8N by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_fv7z_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Instrumental FV7z by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_fv8_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Instrumental FV8 by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_fv8b_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Instrumental FV8b by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_instrumental_fvx_gabox.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Instrumental FVX by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "dereverb_mel_band_roformer_anvuew_sdr_19.1729.ckpt",
+   "name": "Roformer Model: MelBand Roformer | De-Reverb by anvuew",
+   "stems": [
+    "noreverb*",
+    "reverb"
+   ],
+   "sdr": {
+    "noreverb": null,
+    "reverb": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "dereverb_mel_band_roformer_less_aggressive_anvuew_sdr_18.8050.ckpt",
+   "name": "Roformer Model: MelBand Roformer | De-Reverb Less Aggressive by anvuew",
+   "stems": [
+    "noreverb*",
+    "reverb"
+   ],
+   "sdr": {
+    "noreverb": null,
+    "reverb": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "dereverb_mel_band_roformer_mono_anvuew.ckpt",
+   "name": "Roformer Model: MelBand Roformer | De-Reverb Mono by anvuew",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "dereverb_big_mbr_ep_362.ckpt",
+   "name": "Roformer Model: MelBand Roformer | De-Reverb Big by Sucial",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "dereverb_super_big_mbr_ep_346.ckpt",
+   "name": "Roformer Model: MelBand Roformer | De-Reverb Super Big by Sucial",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "dereverb-echo_mel_band_roformer_sdr_10.0169.ckpt",
+   "name": "Roformer Model: MelBand Roformer | De-Reverb-Echo by Sucial",
+   "stems": [
+    "dry",
+    "no dry"
+   ],
+   "sdr": {
+    "dry": null,
+    "no dry": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "dereverb-echo_mel_band_roformer_sdr_13.4843_v2.ckpt",
+   "name": "Roformer Model: MelBand Roformer | De-Reverb-Echo V2 by Sucial",
+   "stems": [
+    "dry*",
+    "no dry"
+   ],
+   "sdr": {
+    "dry": null,
+    "no dry": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "dereverb_echo_mbr_fused.ckpt",
+   "name": "Roformer Model: MelBand Roformer | De-Reverb-Echo Fused by Sucial",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "melband_roformer_big_beta6.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Big Beta 6 by unwa",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "melband_roformer_big_beta6x.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Big Beta 6X by unwa",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "model_chorus_bs_roformer_ep_267_sdr_24.1275.ckpt",
+   "name": "Roformer Model: BS Roformer | Chorus Male-Female by Sucial",
+   "stems": [
+    "male",
+    "female"
+   ],
+   "sdr": {
+    "male": null,
+    "female": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "bs_roformer_male_female_by_aufr33_sdr_7.2889.ckpt",
+   "name": "Roformer Model: BS Roformer | Male-Female by aufr33",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "aspiration_mel_band_roformer_sdr_18.9845.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Aspiration by Sucial",
+   "stems": [
+    "aspiration",
+    "other"
+   ],
+   "sdr": {
+    "aspiration": null,
+    "other": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "aspiration_mel_band_roformer_less_aggr_sdr_18.1201.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Aspiration Less Aggressive by Sucial",
+   "stems": [
+    "aspiration",
+    "other"
+   ],
+   "sdr": {
+    "aspiration": null,
+    "other": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "mel_band_roformer_bleed_suppressor_v1.ckpt",
+   "name": "Roformer Model: MelBand Roformer | Bleed Suppressor V1 by unwa-97chris",
+   "stems": [
+    "instrumental*",
+    "bleed"
+   ],
+   "sdr": {
+    "instrumental": null,
+    "bleed": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "bs_roformer_vocals_resurrection_unwa.ckpt",
+   "name": "Roformer Model: BS Roformer | Vocals Resurrection by unwa",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "bs_roformer_instrumental_resurrection_unwa.ckpt",
+   "name": "Roformer Model: BS Roformer | Instrumental Resurrection by unwa",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "bs_roformer_instrumental_resurrection_gabox.ckpt",
+   "name": "Roformer Model: BS Roformer | Instrumental ResurrectioN by Gabox",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  },
+  {
+   "file": "BS-Roformer-SW.ckpt",
+   "name": "Roformer Model: BS Roformer SW by jarredou",
+   "stems": [
+    "Unknown"
+   ],
+   "sdr": {
+    "unknown": null
+   },
+   "peak": -1,
+   "type": "MDXC"
+  }
+ ],
+ "presets": {
+  "instrumental_clean": {
+   "name": "Instrumental Clean",
+   "description": "Cleanest instrumentals with minimal vocal bleed — Fv7z (bleedless 44.61) + Resurrection Inst (SDR 17.25)",
+   "models": [
+    "mel_band_roformer_instrumental_fv7z_gabox.ckpt",
+    "bs_roformer_instrumental_resurrection_unwa.ckpt"
+   ],
+   "algorithm": "uvr_max_spec",
+   "weights": null,
+   "contributor": "deton24 community guide"
+  },
+  "instrumental_full": {
+   "name": "Instrumental Full",
+   "description": "Maximum instrument preservation — v1e+ (fullness 37.89) + becruily inst (SOTA SDR 17.55)",
+   "models": [
+    "melband_roformer_inst_v1e_plus.ckpt",
+    "mel_band_roformer_instrumental_becruily.ckpt"
+   ],
+   "algorithm": "uvr_max_spec",
+   "weights": null,
+   "contributor": "deton24 community guide"
+  },
+  "instrumental_balanced": {
+   "name": "Instrumental Balanced",
+   "description": "Good balance of noise and fullness — Gabox INSTV8 + Resurrection Inst",
+   "models": [
+    "mel_band_roformer_instrumental_instv8_gabox.ckpt",
+    "bs_roformer_instrumental_resurrection_unwa.ckpt"
+   ],
+   "algorithm": "uvr_max_spec",
+   "weights": null,
+   "contributor": "deton24 community guide"
+  },
+  "instrumental_low_resource": {
+   "name": "Instrumental Low Resource",
+   "description": "Fast ensemble for low VRAM — Resurrection Inst (200MB) + MDX HQ_5 (ONNX, very fast)",
+   "models": [
+    "bs_roformer_instrumental_resurrection_unwa.ckpt",
+    "UVR-MDX-NET-Inst_HQ_5.onnx"
+   ],
+   "algorithm": "avg_fft",
+   "weights": null,
+   "contributor": "deton24 community guide"
+  },
+  "vocal_balanced": {
+   "name": "Vocal Balanced",
+   "description": "Best overall vocal quality — Resurrection (SDR 11.34) + Beta 6X (SDR 11.12) averaged",
+   "models": [
+    "bs_roformer_vocals_resurrection_unwa.ckpt",
+    "melband_roformer_big_beta6x.ckpt"
+   ],
+   "algorithm": "avg_fft",
+   "weights": null,
+   "contributor": "deton24 community guide"
+  },
+  "vocal_clean": {
+   "name": "Vocal Clean",
+   "description": "Minimal instrument bleed in vocals — Revive 2 (bleedless 40.07) + FT2 bleedless (39.30) with min FFT",
+   "models": [
+    "bs_roformer_vocals_revive_v2_unwa.ckpt",
+    "mel_band_roformer_kim_ft2_bleedless_unwa.ckpt"
+   ],
+   "algorithm": "min_fft",
+   "weights": null,
+   "contributor": "deton24 community guide"
+  },
+  "vocal_full": {
+   "name": "Vocal Full",
+   "description": "Maximum vocal capture including harmonies — Revive 3e (fullness 21.43) + becruily vocal with max FFT",
+   "models": [
+    "bs_roformer_vocals_revive_v3e_unwa.ckpt",
+    "mel_band_roformer_vocals_becruily.ckpt"
+   ],
+   "algorithm": "max_fft",
+   "weights": null,
+   "contributor": "deton24 community guide"
+  },
+  "vocal_rvc": {
+   "name": "Vocal RVC",
+   "description": "Optimized for RVC/AI voice training data — Beta 6X + Gabox voc_fv4 averaged",
+   "models": [
+    "melband_roformer_big_beta6x.ckpt",
+    "mel_band_roformer_vocals_fv4_gabox.ckpt"
+   ],
+   "algorithm": "avg_wave",
+   "weights": null,
+   "contributor": "deton24 community guide"
+  },
+  "karaoke": {
+   "name": "Karaoke",
+   "description": "Lead vocal removal — 3-model karaoke ensemble reaches SDR ~10.6 vs ~10.2 single model",
+   "models": [
+    "mel_band_roformer_karaoke_aufr33_viperx_sdr_10.1956.ckpt",
+    "mel_band_roformer_karaoke_gabox_v2.ckpt",
+    "mel_band_roformer_karaoke_becruily.ckpt"
+   ],
+   "algorithm": "avg_wave",
+   "weights": null,
+   "contributor": "deton24 community guide"
+  }
+ }
+}

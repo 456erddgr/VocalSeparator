@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>VocalSeparator 安装程序</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-user-select:none;user-select:none}
+html,body{height:100%;overflow:hidden;background:#06070d}
+body{font:14px/1.55 "Microsoft YaHei UI","Segoe UI",system-ui,sans-serif;color:#fff}
+.win{position:absolute;inset:0;display:flex;flex-direction:column;padding:12px 18px 14px;gap:12px;
+  background:radial-gradient(1100px 520px at 10% -8%,rgba(99,102,241,.48),transparent 62%),
+             radial-gradient(820px 460px at 102% 4%,rgba(236,72,153,.28),transparent 64%),
+             radial-gradient(900px 560px at 76% 112%,rgba(34,211,238,.28),transparent 64%),
+             linear-gradient(160deg,#0b0d17,#111227 48%,#0a1320)}
+.main{flex:1;display:flex;gap:20px;min-height:0}
+/* 左栏：整块就是截图，右下角压标题 —— 比例与截图一致，不裁不放大 */
+.left{flex:1.5;position:relative;border-radius:16px;overflow:hidden;min-width:0;
+  border:1px solid rgba(255,255,255,.17);background:#0a0d18;
+  box-shadow:0 22px 52px -28px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.14)}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .7s ease}
+.slide.on{opacity:1}
+.slide img{width:100%;height:100%;object-fit:cover;display:block}
+.cap{position:absolute;left:0;right:0;bottom:0;padding:30px 18px 13px;
+  background:linear-gradient(to top,rgba(4,6,14,.93),rgba(4,6,14,.45) 55%,transparent)}
+.cap b{display:block;font-size:14.5px;font-weight:600}
+.cap span{display:block;margin-top:2px;font-size:11.5px;opacity:.72}
+.right{flex:1;display:flex;flex-direction:column;justify-content:center;min-width:250px;padding-right:4px}
+.right h1{font-size:21px;font-weight:700}
+.right h1 em{font-style:normal;font-size:10.5px;font-weight:500;opacity:.55;margin-left:5px}
+.right .sub{font-size:11.5px;opacity:.6;margin-top:5px}
+.sec{margin-top:16px;font-size:10.5px;letter-spacing:1.4px;opacity:.5}
+ul,ol{list-style:none;margin-top:7px;display:flex;flex-direction:column;gap:6px}
+li{font-size:12.5px;padding:6px 10px 6px 21px;border-radius:9px;opacity:.6;position:relative;
+  transition:opacity .3s,background .3s,transform .3s}
+li:before{content:"";position:absolute;left:8px;top:50%;width:5px;height:5px;margin-top:-2.5px;
+  border-radius:99px;background:rgba(255,255,255,.3);transition:.3s}
+li.on{opacity:1;background:rgba(255,255,255,.10);transform:translateX(2px)}
+li.on:before{background:#8ab4ff;box-shadow:0 0 9px rgba(138,180,255,.9)}
+.foot{flex:0 0 auto}
+.bar{height:8px;border-radius:99px;background:rgba(255,255,255,.13);overflow:hidden;position:relative}
+.bar i{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:99px;
+  background:linear-gradient(90deg,#7c8cff,#5ad0ff);transition:width .4s ease}
+.row{display:flex;justify-content:space-between;margin-top:7px;font-size:11.5px;opacity:.72}
+.btns{display:flex;gap:12px;margin-top:10px}
+button.big{flex:1;height:40px;border:1px solid rgba(255,255,255,.2);border-radius:13px;
+  background:rgba(255,255,255,.11);color:#fff;font:600 14px inherit;cursor:pointer;
+  transition:background .18s,transform .18s}
+button.big:hover{background:rgba(255,255,255,.19)}
+button.big:active{transform:scale(.975)}
+button.big.primary{background:linear-gradient(135deg,#6d70f6,#5a5df0);border-color:rgba(255,255,255,.3)}
+button.big[disabled]{opacity:.5;cursor:default;transform:none}
+.bot{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.link{border:0;background:transparent;color:#fff;opacity:.6;font:11.5px inherit;cursor:pointer;
+  padding:5px 10px;border-radius:8px;transition:.18s}
+.link:hover{opacity:1;background:rgba(255,255,255,.12)}
+.ver{font-size:11px;opacity:.42}
+</style></head>
+<body>
+<div class="win">
+  <div class="main">
+    <div class="left"><div id="track" style="position:absolute;inset:0"></div>
+      <div class="cap"><b id="capT">—</b><span id="capS"></span></div>
+    </div>
+    <div class="right">
+      <h1>本地人声分离工作站<em>离线 · 免下载</em></h1>
+      <div class="sub">全部模型与运行环境已内置，音频不上传</div>
+      <div class="sec">能 做 什 么</div><ul id="feat"></ul>
+      <div class="sec">怎 么 用</div><ol id="use"></ol>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="bar"><i id="fill"></i></div>
+    <div class="row"><span id="msg">准备就绪 —— 点「开始安装」</span><span id="pct">0%</span></div>
+    <div class="btns">
+      <button class="big primary" id="btnMain">开始安装</button>
+      <button class="big" id="btnSub">关闭</button>
+    </div>
+    <div class="bot">
+      <button class="link" id="btnUnin">一键卸载已安装版本</button>
+      <span class="ver">VocalSeparator v1.1.0</span>
+    </div>
+  </div>
+</div>
+<script>window.SHOTS=[];</script>
+<script>
+const SLIDES=[
+ ["单曲分离 · 主界面","拖入音频 → 选模型 → 开始分离，全程本地"],
+ ["分离模式与模型选择","单模型 / 内置集成 / 自定义集成，标签标注推荐"],
+ ["输出与参数","输出格式、采样率、overlap、batch 随手调"],
+ ["人声去回声（RVC 前置）","只对分离出的人声轨做去混响 / 去回声"],
+ ["任务与状态","进度、剩余时间、输出目录一屏看全"],
+ ["任务列表 · 实时进度","刷新页面也不会中断，历史任务可回看"],
+ ["深色 / 浅色外观","一键切换，配色跟随主题联动"]];
+const FEATURES=["本地离线运行，音频不上传","8 个模型内置，免下载","去回声 / 去混响，RVC 前置"];
+const USAGE=["把歌拖进去，或点「点击上传」","选分离模式，点「开始分离」","输出目录里拿「人声 / 伴奏」"];
+
+const track=document.getElementById('track');
+const layers=SLIDES.map((s,i)=>{const d=document.createElement('div');
+  d.className='slide'+(i===0?' on':'');const im=document.createElement('img');
+  im.src='show/'+(i+1)+'.png';d.appendChild(im);track.appendChild(d);return d;});
+const feat=document.getElementById('feat'),use=document.getElementById('use');
+FEATURES.forEach(t=>{const li=document.createElement('li');li.textContent=t;feat.appendChild(li);});
+USAGE.forEach((t,i)=>{const li=document.createElement('li');li.textContent=(i+1)+'. '+t;use.appendChild(li);});
+const fLi=[...feat.children],uLi=[...use.children];
+let cur=0;
+setInterval(()=>{layers[cur].classList.remove('on');cur=(cur+1)%layers.length;
+  layers[cur].classList.add('on');
+  document.getElementById('capT').textContent=SLIDES[cur][0];
+  document.getElementById('capS').textContent=SLIDES[cur][1];},3200);
+document.getElementById('capT').textContent=SLIDES[0][0];
+document.getElementById('capS').textContent=SLIDES[0][1];
+let h=0;setInterval(()=>{fLi.forEach((e,i)=>e.classList.toggle('on',i===h%3));
+  uLi.forEach((e,i)=>e.classList.toggle('on',i===(h+1)%3));h++;},1100);
+window.setProg=(p,msg)=>{document.getElementById('fill').style.width=Math.round(p*100)+'%';
+  document.getElementById('pct').textContent=Math.round(p*100)+'%';
+  if(msg)document.getElementById('msg').textContent=msg;};
+window.setDone=()=>{if(window.__d)return;window.__d=1;
+  const m=document.getElementById('btnMain');m.disabled=false;m.textContent='启动 VocalSeparator';
+  document.getElementById('btnSub').textContent='关闭';};
+window.setBusy=()=>{const m=document.getElementById('btnMain');
+  m.disabled=true;m.textContent='正在安装，请稍候…';};
+const api=()=>window.pywebview&&window.pywebview.api;
+let started=false;
+setInterval(async()=>{const a=api();if(!a||!a.state)return;
+  try{const s=await a.state();window.setProg(s.p||0,s.m);if(s.done)window.setDone();}catch(e){}},250);
+document.getElementById('btnSub').onclick=()=>{const a=api();if(a)a.close_win();};
+document.getElementById('btnMain').onclick=()=>{const a=api();if(!a)return;
+  if(window.__d){a.launch_app();a.close_win();}else if(!started){started=true;
+  window.setBusy();a.begin();}};
+document.getElementById('btnUnin').onclick=()=>{const a=api();if(a)a.uninstall();};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){const a=api();if(a)a.close_win();}});
+</script>
+</body></html>

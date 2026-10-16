@@ -1,0 +1,44 @@
+MIT License
+
+Copyright (c) 2026 456erddgr
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+===============================================================================
+
+第三方组件与模型许可说明
+---------------------------------------------------------------------------
+
+本程序是「外壳 + 调度 + 后处理」，真正的分离能力来自以下第三方项目。
+它们各自的许可与著作权归原作者所有，本项目仅以依赖形式调用，未修改其源码：
+
+- audio-separator (MIT)        https://github.com/nomadkaraoke/python-audio-separator
+- PyTorch / torchaudio         https://github.com/pytorch/pytorch (BSD-3-Clause)
+- Gradio                       https://github.com/gradio-app/gradio (Apache-2.0)
+- pywebview                    https://github.com/r0x0r/pywebview (BSD-3-Clause)
+- FFmpeg  (LGPL/GPL)           https://ffmpeg.org/   —— 以可执行文件形式随包分发
+- Demucs  (MIT)                https://github.com/facebookresearch/demucs
+
+模型权重（.ckpt / .pth）不包含在本仓库中，其许可取决于各权重作者：
+
+- BS-Roformer / Mel-Band Roformer 系列  —— UVR 社区与 unwa、aufr33、viperx、Gabox 等作者
+- De-Reverb-Echo / DeReverb 系列        —— Sucial、anvuew 等作者
+
+使用、再分发或商用这些权重前，请自行核对其原始发布页的许可条款。
+本项目不因 MIT 许可而授予你任何第三方权重或第三方库的额外权利。
