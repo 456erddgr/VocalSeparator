@@ -224,7 +224,22 @@ venv\Scripts\python.exe app.py
 
 2. **确认 `DEREVERB_PRIMARY_STEM` 是否正确**。它决定后处理作用在**人声**还是**伴奏**上。去回声几乎总是人声 → 保持人声。
 
-3. **双模型串联**这种复合选项：`DEREVERB_CHOICES` 的 value 需要能表达「先 A 后 B」。**待确认**：具体怎么表达（列表？特殊分隔符？）请直接读 `run_dereverb`（`app.py:1225+`）确认，不要猜。
+3. **双模型串联**：`DEREVERB_CHOICES` 的 value 就是用 **`+` 连接的模型文件名字符串**，按顺序「先 A 后 B」依次推理（`app.py:672-673`）。例如：
+
+   ```python
+   ("双模型串联 V2 → Fused",
+    "dereverb-echo_mel_band_roformer_sdr_13.4843_v2.ckpt+dereverb_echo_mbr_fused.ckpt"),
+   ```
+
+   规则：
+
+   - `+` 是分隔符，**左右两侧都是 `models\` 里的文件名**（与 `BUILTIN_MODELS` 的 key 同口径，逐字符一致）；
+   - **顺序即执行顺序**，前面的先推理、结果作为后面的输入；
+   - 解析处是 `dereverb_primary_stem()`，它按 `+` 拆分处理；
+   - **串联意味着 2 倍推理时间**，界面上请把耗时预期写进选项文案；
+   - 缺失任何一个权重都会触发离线守卫的「本地缺少模型文件」报错，请在文档里说明需要哪两个文件。
+
+   验证时**两个模型都要在位**，并确认中间产物确实喂给了第二个模型（看日志里两次推理都跑了）。
 
 4. **验证清单**：
    - 选项在界面出现、默认项正确；
@@ -246,7 +261,10 @@ venv\Scripts\python.exe app.py
 ## 其它常见扩展点
 
 - **后处理参数**：响度钳制范围、`_spectral_tilt_match` 的 `max_db`（默认 6.0）、`f_lo`（180 Hz）/ `f_hi`（16 kHz）——都在 `app.py:1091-1255`。**改这些会明显影响音色，请附 A/B 试听说明**。
-- **性能参数默认值**：`overlap`、`batch_size`（默认 8）、`segment_size`（256）等。**注意 `overlap` 有一个默认值矛盾尚未收敛**：`app.py:4871` 与 `app.py:4978` 的代码是 `gr.Slider(2, 64, value=4, ...)`（实际默认 **4**），但 `app.py:18` 的改造说明写「overlap 默认值 32 -> 8」，仓库根 `README.md:39` 写「默认 32」，`SECONDS_PER_AUDIO_SECOND`（`app.py:472`）的注释自述是「overlap=4 + native fp16」。**改这个参数前请先把口径统一**，否则文档会互相打架。另外实测结论是：CPU 线程 / `cudnn.benchmark` / `batch_size` 差异 **< 15%**，而 `overlap` **主导成本**（8→32 约 4 倍慢）。改默认值要有数据支撑。
+- **性能参数默认值**：`overlap`、`batch_size`（默认 8）、`segment_size`（256）等。
+  - **`overlap` 官方默认值是 `4`**（已裁决，以此为准）。依据：滑杆标签 `OVERLAP_LABEL`（`app.py:4822`）写着「重叠倍率 overlap（**4 默认·与 Roformer 训练配置一致** / 8 更保守 / 16 精细，越高越慢成正比）」，代码 `app.py:4871` / `app.py:4978` 也是 `gr.Slider(2, 64, value=4, ...)`。**4 之所以是默认，是因为它与 Roformer 自身的训练配置一致**——改它等于让推理条件偏离模型训练分布。
+  - `app.py:18` 的「overlap 默认值 32 -> 8」与旧 `README.md:39` 的「默认 32」是**过时的历史改造说明，不是运行事实**，不要据此判断或引用。改这个参数前，先把这两处遗留注释一起更新掉。
+  - 实测结论：CPU 线程 / `cudnn.benchmark` / `batch_size` 差异 **< 15%**（瓶颈在 GPU 推理），而 `overlap` **主导成本**（8→32 约 4 倍慢）。**改默认值要有数据支撑**。
 - **进度条**：`install_tqdm_hook()` 把 `audio_separator.separator.architectures.mdxc_separator` 里的 tqdm 换成子类，把 `(n, total)` 报到当前任务。要动进度显示，先读这一段。
 - **界面**：`app.py:2590-4157`。改布局注意轮询组件的去重缓存（`_cached_upd` / `_cached_choices`）——直接改组件值而不走缓存，可能引入闪烁。
 

@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """VocalSeparator 安装程序 · WebView2 版（从零重构）
 
 为什么换栈：Tkinter 那版无论怎么调都躲不开三个问题 ——
@@ -12,6 +12,7 @@ import codecs
 import ctypes
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -57,12 +58,40 @@ def make_lnk(path, target, workdir, desc):
 
 
 def find_payload():
-    cands = [HERE / PAYLOAD_NAME, Path.cwd() / PAYLOAD_NAME]
-    cands += sorted(HERE.glob("payload*.7z*"))
-    for c in cands:
+    """定位 payload。
+
+    两种分发形态都要支持：
+      1) 单文件  payload.7z                （本地直接分发）
+      2) 分卷    payload.7z.001 / .002 ... （GitHub Release 分发，单文件上限 2GB）
+
+    分卷时必须把**第一个卷**交给 7z，7z 会自动按 .001/.002 顺序接续读取
+    同目录下的其余卷；传其它卷会读不到数据。
+    """
+    # 单文件优先
+    for c in (HERE / PAYLOAD_NAME, Path.cwd() / PAYLOAD_NAME):
         if c.exists():
             return c
-    return None
+    # 再找分卷：只认 .001 作为入口
+    for base in (HERE, Path.cwd()):
+        first = base / (PAYLOAD_NAME + ".001")
+        if first.exists():
+            return first
+    # 最后兜底：任意 payload*.7z*（例如用户自行改名），但排出 .002+ 这类非首卷
+    cands = [p for p in sorted(HERE.glob("payload*.7z*"))
+             if not re.search(r"\.7z\.\d+$", p.name) or p.name.endswith(".7z.001")]
+    return cands[0] if cands else None
+
+
+def describe_payload(p) -> str:
+    """给人看的 payload 描述，说明是单文件还是分卷、共几卷。"""
+    if p is None:
+        return "未找到"
+    if re.search(r"\.7z\.\d+$", p.name):
+        vols = sorted(p.parent.glob(Path(p.name).name[:-3] + "*"))
+        vols = [v for v in vols if re.search(r"\.7z\.\d+$", v.name)]
+        total = sum(v.stat().st_size for v in vols)
+        return "%s（分卷，共 %d 卷 / %.2f GB）" % (p.name, len(vols), total / 1073741824.0)
+    return "%s（单文件 / %.2f GB）" % (p.name, p.stat().st_size / 1073741824.0)
 
 
 def sevenzip():
@@ -174,9 +203,12 @@ class Api:
             log("autotest begin -> TARGET=%s" % TARGET)
             self.push(0.02, "正在释放组件…")
             payload = find_payload()
-            log("payload=%s (%.2f GB)" % (payload, payload.stat().st_size / 1073741824.0) if payload else "payload 未找到")
+            log("payload=%s" % describe_payload(payload))
             if payload is None:
-                raise RuntimeError("没找到 %s，请和本安装程序放在同一文件夹" % PAYLOAD_NAME)
+                raise RuntimeError(
+                    "没找到 %s 或 %s.001 —— 请把安装程序与 payload 文件"
+                    "放在同一个文件夹（分卷分发时所有 .001/.002/... 都要下全）"
+                    % (PAYLOAD_NAME, PAYLOAD_NAME))
             extract(payload, lambda f: self.push(0.02 + 0.82 * f, "正在释放组件… %d%%" % int(f * 100)))
             log("extract done %.1fs" % (time.time() - t0))
             self.push(0.86, "正在绑定自带 Python…")
