@@ -235,6 +235,29 @@ class Api:
             self.push(0.0, "出错：" + str(e)[:70])
 
 
+def _verify_extracted():
+    """解压后的最小完整性校验：关键文件齐不齐。
+
+    7z 偶尔会返回非零码（例如杀毒软件短暂锁住某个文件后自我恢复、
+    或分卷被资源管理器预览占用），但文件其实已经全部写出来了。
+    这种情况不该直接判安装失败 —— 先问「东西在不在」，再决定。
+    返回 (ok, 缺失列表)。
+    """
+    need = [
+        "app.py",
+        "launcher.py",
+        "VocalSeparator.exe",
+        "catalog.json",
+        os.path.join("venv", "Scripts", "python.exe"),
+        os.path.join("venv", "pyvenv.cfg"),
+        os.path.join("runtime", "python311", "python.exe"),
+        os.path.join("bin", "ffmpeg.exe"),
+        "models",
+    ]
+    missing = [n for n in need if not (TARGET / n).exists()]
+    return (not missing), missing
+
+
 def extract(payload, on_pct):
     """解压并上报进度。
 
@@ -242,6 +265,10 @@ def extract(payload, on_pct):
     阻塞到「读满 n 个字符或 EOF」。7z 的进度是 \r 覆盖式的、总量很小，
     所以那一行会卡住很久不返回，回调一次都执行不到，进度条于是永远不动。
     现在改为二进制 + os.read(fd, 65536)：有多少读多少，立刻返回。
+
+    健壮性：7z 退出码非 0 时，不立刻判失败，先用 _verify_extracted() 看关键
+    文件是否齐全。齐全则降级为「警告继续」（同时在错误里带上 7z 输出末尾，
+    便于真出问题时排查）；不齐全才抛错，并附上 7z 退出码与输出尾部。
     """
     sz = sevenzip()
     if sz is None:
@@ -255,6 +282,7 @@ def extract(payload, on_pct):
     fd = proc.stdout.fileno()
     dec = codecs.getincrementaldecoder("utf-8")("replace")
     buf = ""
+    tail = ""
     last = -1
     logged = False
     while True:
@@ -267,7 +295,9 @@ def extract(payload, on_pct):
         if not logged:
             logged = True
             log("7z sample: %r" % data[:140])
-        buf += dec.decode(data)
+        chunk = dec.decode(data)
+        tail = (tail + chunk)[-4000:]
+        buf += chunk
         k = buf.rfind("%")
         if k > 0:
             j = k - 1
@@ -277,14 +307,24 @@ def extract(payload, on_pct):
                 pct = int(buf[j + 1:k].strip())
                 if pct != last:
                     last = pct
-                    on_pct(pct / 100.0)
+                    on_pct(min(1.0, pct / 100.0))
             except Exception:
                 pass
             buf = buf[k + 1:]
         if len(buf) > 8192:
             buf = buf[-1024:]
-    if proc.wait() != 0:
-        raise RuntimeError("解压失败（7z 返回 %s）" % proc.returncode)
+    rc = proc.wait()
+    if rc == 0:
+        return
+    ok, missing = _verify_extracted()
+    if ok:
+        log("7z 退出码 %s，但关键文件齐全 —— 按成功继续（已忽略）" % rc)
+        return
+    raise RuntimeError(
+        "解压失败（7z 返回 %s，缺少 %d 个关键文件：%s）\n"
+        "常见原因：分卷没下全、磁盘空间不足、安装包被安全软件拦截。\n"
+        "7z 输出末尾：%s"
+        % (rc, len(missing), ", ".join(missing[:5]), tail[-800:].replace("\r", " ")))
 
 
 def fix_venv():

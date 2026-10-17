@@ -7,6 +7,35 @@
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0078d4)](#环境要求)
 [![Python](https://img.shields.io/badge/python-3.10%20~%203.12-3776ab)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/456erddgr/VocalSeparator?label=download&color=2ea44f)](https://github.com/456erddgr/VocalSeparator/releases/latest)
+
+---
+
+## ⬇️ 直接下载（普通用户走这条）
+
+### **[👉 点这里下载最新版（Releases）](https://github.com/456erddgr/VocalSeparator/releases/latest)**
+
+安装包**不在仓库里**（体积 12.56 GB，GitHub 仓库单文件上限 100 MB），
+全部放在 Release 页面：
+
+| 要下的文件 | 说明 |
+| --- | --- |
+| [`VocalSeparator-Setup.exe`](https://github.com/456erddgr/VocalSeparator/releases/latest) | 安装程序，约 19 MB |
+| `payload.7z.001` ~ `payload.7z.007` | 程序本体 + Python 运行时 + FFmpeg + **8 个内置模型**，**7 卷必须全下** |
+
+> 下完把它们**放在同一个文件夹**，双击 `VocalSeparator-Setup.exe` 即可。
+> 详细校验值与常见坑见 [Release 说明](https://github.com/456erddgr/VocalSeparator/releases/latest)
+> 与 [方式 A](#方式-a下载一键安装包普通用户推荐)。
+
+**不想下 12.56 GB？** 只要源码的话，仓库本身只有 **3.62 MB**：
+
+```powershell
+git clone https://github.com/456erddgr/VocalSeparator.git
+```
+
+然后按 [方式 B](#方式-b从源码运行开发者--想自己改) 自己装依赖、按需下载模型。
+
+---
 
 ![单曲分离主界面](show/1.png)
 
