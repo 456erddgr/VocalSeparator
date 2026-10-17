@@ -27,7 +27,21 @@
 > 详细校验值与常见坑见 [Release 说明](https://github.com/456erddgr/VocalSeparator/releases/latest)
 > 与 [方式 A](#方式-a下载一键安装包普通用户推荐)。
 
-**不想下 12.56 GB？** 只要源码的话，仓库本身只有 **3.62 MB**：
+### 或者：从 123 云盘下载（国内更快 · 不用拼分卷）
+
+> 链接：**https://1843626542.share.123pan.cn/123pan/VX07Td-o8MmA?pwd=yx7y**\
+> 提取码：**`yx7y`**（链接已带 `pwd` 参数，通常点开即可）
+
+云盘里放的是**同一份内容**，但已打包成单个文件，**不需要凑齐 7 个分卷**，下载体验更省心：
+
+- 国内访问比 GitHub 快很多，不容易断
+- 不需要「7 卷必须全下」的完整性搭配
+- 解压/安装方式与下面完全一致
+
+> ⚠️ 第三方网盘可能限速、需要登录，也可能随时间失效；**GitHub Release 是长期唯一官方来源**，
+> 云盘链接失效时请回到上面的 Release 页面。
+
+**不想下 12.56 GB？** 只要源码的话，仓库本身只有 **2.32 MB**：
 
 ```powershell
 git clone https://github.com/456erddgr/VocalSeparator.git
